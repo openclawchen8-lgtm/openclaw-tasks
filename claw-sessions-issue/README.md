@@ -1,4 +1,4 @@
-# member-backup 專案
+# claw-sessions-issue 專案
 
 ## 概述
 由 ideas2tasks 自動建立的任務。
@@ -7,7 +7,7 @@
 
 | Task | 標題 | 負責人 | 優先級 | 狀態 |
 |------|------|--------|--------|------|
-| T002 | 表列出目前所有備份來源路徑及目的路徑 | 碼農 2 號 | medium | pending |
+| T001 | 幫我寫一篇howto關於openclaw chat sess | 安安 | medium | pending |
 
 ## 進度
 - **完成**: 0/1

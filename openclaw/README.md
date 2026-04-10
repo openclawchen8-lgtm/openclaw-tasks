@@ -7,12 +7,12 @@
 
 | Task | 標題 | 負責人 | 優先級 | 狀態 |
 |------|------|--------|--------|------|
-| T025 | How to install and start OpenC | 碼農 1 號 | medium | pending |
-| T026 | How to install openclaw with n | 安安 | medium | pending |
-| T027 | How to install pre-defined ope | 碼農 1 號 | medium | pending |
-| T028 | How to install pre-defined ope | 安安 | medium | pending |
-| T029 | How to create pre-defined memb | 碼農 1 號 | medium | pending |
-| T030 | How to backup and restore for  | 安安 | medium | pending |
+| T031 | How to install and start OpenC | 碼農 1 號 | medium | pending |
+| T032 | How to install openclaw with n | 安安 | medium | pending |
+| T033 | How to install pre-defined ope | 碼農 1 號 | medium | pending |
+| T034 | How to install pre-defined ope | 安安 | medium | pending |
+| T035 | How to create pre-defined memb | 碼農 1 號 | medium | pending |
+| T036 | How to backup and restore for  | 安安 | medium | pending |
 
 ## 進度
 - **完成**: 0/6
