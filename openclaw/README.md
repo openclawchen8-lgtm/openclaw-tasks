@@ -1,23 +1,24 @@
 # openclaw 專案
 
-## 概覽
+## 概述
 由 ideas2tasks 自動建立的任務。
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
+## Tasks 清單
 
-## 📋 任務狀態
-**進度**: 0/6 完成
+| Task | 標題 | 負責人 | 優先級 | 狀態 |
+|------|------|--------|--------|------|
+| T025 | How to install and start OpenC | 碼農 1 號 | medium | pending |
+| T026 | How to install openclaw with n | 安安 | medium | pending |
+| T027 | How to install pre-defined ope | 碼農 1 號 | medium | pending |
+| T028 | How to install pre-defined ope | 安安 | medium | pending |
+| T029 | How to create pre-defined memb | 碼農 1 號 | medium | pending |
+| T030 | How to backup and restore for  | 安安 | medium | pending |
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T019 | How to install and start OpenClaw | 碼農 1 號 | ⬜ pending |
-| T020 | How to install openclaw with npm | 安安 | ⬜ pending |
-| T021 | How to install pre-defined openclaw skills | 碼農 1 號 | ⬜ pending |
-| T022 | How to install pre-defined openclaw plugins | 安安 | ⬜ pending |
-| T023 | How to create pre-defined members | 碼農 1 號 | ⬜ pending |
-| T024 | How to backup and restore for openclaw | 安安 | ⬜ pending |
+## 進度
+- **完成**: 0/6
+- **進行中**: 0
+- **待處理**: 6
 
-## 來源
-- 由 ideas2tasks 自動建立
+---
+
+_建立日期: 2026-04-10_
