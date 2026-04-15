@@ -1,20 +1,21 @@
 # ux-improvement
 
-## 概覽
-改善 OpenClaw 使用體驗，目前主要解決命令輸出截斷問題。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `/Users/claw/.qclaw/workspace/SOUL.md` | 新增「命令輸出處理規則」章節 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 診斷命令截斷原因 | 未指派 | 中 | ✅ done |
+| T2 | 設計輸出完整化的方案 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 2/2 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 診斷命令截斷原因 | 寶寶 | ✅ done |
-| T002 | 設計輸出完整化的方案 | 碼農 1 號 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- Idea 檔案: `/Users/claw/Ideas/command-expain.txt`
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

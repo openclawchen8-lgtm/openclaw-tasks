@@ -1,12 +1,14 @@
-# gold-analysis-improve
+# ideas2tasks-fix
 
 ## 任務狀態
 
 | Task | 標題 | 負責人 | 優先順序 | 狀態 |
 |------|------|--------|---------|------|
-| T1 | 任務 T001 | 未指派 | 中 | ⬜ pending |
-| T2 | 任務 T002 | 未指派 | 中 | ⬜ pending |
-| T3 | gold-analysis 增加 https://tw. | 未指派 | 中 | ⬜ pending |
+| T1 | 任務 T001 | 未指派 | 中 | ✅ done |
+| T2 | 任務 T002 | 未指派 | 中 | ✅ done |
+| T3 | 任務 T003 | 未指派 | 中 | ✅ done |
+| T4 | 任務 T004 | 未指派 | 中 | ✅ done |
+| T5 | 方案 B：task_audit.py 主動稽核系統 | 未指派 | 中 | ⬜ pending |
 
 ## 更新規範
 

@@ -1,24 +1,24 @@
-# tasks-executor 專案
+# tasks-executor
 
-## 概覽
-自動執行 tasks 機制 — 從 ideas 掃描到 agent 執行的完整自動化。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 設計 tasks-executor 規格 | 未指派 | 中 | ✅ done |
+| T2 | 實作 tasks-executor 核心 | 未指派 | 中 | ✅ done |
+| T3 | 實作 lifecycle.py 狀態管理 | 未指派 | 中 | ✅ done |
+| T4 | 驗證任務執行器 | 未指派 | 中 | ✅ done |
+| T5 | 建立 Cron 自動化排程 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 5/5 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 設計 executor 架構 | 寶寶 | ✅ done |
-| T002 | 實作 executor.py | 寶寶 | ✅ done |
-| T003 | 修改 lifecycle.py 輸出格式 | 寶寶 | ✅ done |
-| T004 | Telegram 互動測試 | 樂樂 | ✅ done |
-| T005 | 整合 cron 排程 | 寶寶 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 流程
-```
-lifecycle.py 掃描 → Telegram 通知 → 用戶確認 → executor.py 建立 + spawn → 結果彙報
-```
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

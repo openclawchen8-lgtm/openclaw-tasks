@@ -1,25 +1,24 @@
 # ideas2tasks
 
-## 概覽
-將 /Users/claw/Ideas 中的臨時想法自動分類、拆解為敏捷專案任務的 Skill。支援掃描、分類、建立專案結構、Scrum 團隊分工、Lifecycle 狀態管理。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `~/.qclaw/workspace/skills/ideas2tasks/SKILL.md` | Skill 規格書 |
-| `~/.qclaw/workspace/skills/ideas2tasks/scripts/scan.py` | 掃描腳本 |
-| `~/.qclaw/workspace/skills/ideas2tasks/scripts/classify.py` | 分類腳本 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 設計流程架構 | 未指派 | 中 | ✅ done |
+| T2 | 實作掃描和分類模組 | 未指派 | 中 | ✅ done |
+| T3 | 撰寫規格書 | 未指派 | 中 | ✅ done |
+| T4 | Scrum 團隊分工機制 | 未指派 | 中 | ✅ done |
+| T5 | Lifecycle 狀態機 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 5/5 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 設計 ideas2tasks 流程架構 | 寶寶 | ✅ done |
-| T002 | 實作掃描與分類邏輯 | 碼農 1 號 | ✅ done |
-| T003 | 撰寫 SKILL.md 規格書 | 安安 | ✅ done |
-| T004 | 設計 Scrum team 分配機制 | 寶寶 | ✅ done |
-| T005 | 建立 Lifecycle 狀態機 | 寶寶 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- Idea 檔案: `/Users/claw/Ideas/tasks-manager.txt`
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

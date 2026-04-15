@@ -1,24 +1,24 @@
-# session-logger-plugin 專案
+# session-logger-plugin
 
-## 概覽
-開發 OpenClaw Plugin，自動將完整對話存檔（含思考過程與完整指令）到指定目錄。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| docs/architecture.md | OpenClaw Plugin 架構研究報告 |
-| docs/spec.md | Session Logger Plugin 技術規格 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | Plugin 架構研究與規格設計 | 未指派 | 中 | ✅ done |
+| T2 | 任務 T002 | 未指派 | 中 | ⬜ pending |
+| T3 | 任務 T003 | 未指派 | 中 | ⬜ pending |
+| T4 | 任務 T004 | 未指派 | 中 | ⬜ pending |
+| T5 | 任務 T005 | 未指派 | 中 | ⬜ pending |
 
-## 📋 任務狀態
-**進度**: 1/5 完成
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | Plugin 架構研究與規格設計 | 碼農1號 | ✅ done |
-| T002 | Plugin 基礎框架實作 | 碼農1號 | ⬜ pending |
-| T003 | Session 攔截與格式化邏輯 | 碼農2號 | ⬜ pending |
-| T004 | 檔案輸出與滾動策略 | 碼農2號 | ⬜ pending |
-| T005 | 安裝與測試驗證 | 樂樂 | ⬜ pending |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- 背景文件：`/Users/claw/howto/session-logging-analysis.md`
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

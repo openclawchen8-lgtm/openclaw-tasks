@@ -1,19 +1,21 @@
-# llm-router 專案
+# llm-router
 
-## 概述
-由 ideas2tasks 自動建立的任務。
+## 任務狀態
 
-## Tasks 清單
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 任務 T001 | 未指派 | 中 | ⬜ pending |
+| T2 | 研究下列這幾篇，並給出 2025 best自建llm rou | 未指派 | 中 | ⬜ pending |
 
-| Task | 標題 | 負責人 | 優先級 | 狀態 |
-|------|------|--------|--------|------|
-| T002 | 研究下列這幾篇，並給出 2025 best自建llm rou | 碼農 1 號 | medium | pending |
+## 更新規範
 
-## 進度
-- **完成**: 0/1
-- **進行中**: 0
-- **待處理**: 1
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
----
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-_建立日期: 2026-04-10_
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

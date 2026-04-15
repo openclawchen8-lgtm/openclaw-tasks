@@ -1,20 +1,24 @@
 # dashboard-tool
 
-## 概覽
-建立任務追蹤 Dashboard，提供視覺化界面查看專案進度。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `/Users/claw/.qclaw/workspace/scripts/today_done_tasks.sh` | 今日完成任務腳本 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 實現今日完成任務查詢功能 | 未指派 | 中 | ✅ done |
+| T2 | 實現「專案進度總覽」功能 | 未指派 | 中 | ✅ done |
+| T3 | 實現「待處理任務列表」功能 | 未指派 | 中 | ✅ done |
+| T4 | 實現「團隊工作量分布」功能 | 未指派 | 中 | ✅ done |
+| T5 | 統一所有專案 README.md 格式 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 2/5 完成
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 今日完成任務 | - | ✅ done |
-| T002 | 專案進度總覽 | - | ⬜ pending |
-| T003 | 待處理任務 | - | ⬜ pending |
-| T004 | 團隊工作量 | - | ⬜ pending |
-| T005 | 統一 README 格式 | 碼農1號 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
+
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

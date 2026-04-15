@@ -1,23 +1,22 @@
 # cmd-log-parser
 
-## 概覽
-解析 OpenClaw session JSONL，提取完整 exec 命令記錄，供審計與學習用。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `/Users/claw/scripts/cmd-log-parser.py` | 解析腳本 |
-| `/Users/claw/logs/cmd-log-YYYY-MM-DD.md` | 每日命令日誌存檔 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 任務 T001 | 未指派 | 中 | ✅ done |
+| T2 | 任務 T002 | 未指派 | 中 | ✅ done |
+| T3 | Howto 文件 | 未指派 | 中 | ⬜ pending |
 
-## 📋 任務狀態
-**進度**: 1/3 完成
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 腳本開發 | - | ✅ done |
-| T002 | Cron 自動化 | - | ⬜ pending |
-| T003 | Howto 文件 | - | ⬜ pending |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 目標
-- 擺脫 Telegram 介面截斷限制，讓用戶看見完整的命令語法
-- 建立每日命令日誌存檔
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

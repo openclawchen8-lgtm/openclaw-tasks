@@ -1,19 +1,21 @@
-# read 專案
+# read
 
-## 概覽
-安全閱讀與 AI 輸出管理相關任務。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | AWS OpenClaw 安全文章閱讀 | 未指派 | 中 | ✅ done |
+| T2 | Session 完整對話 log 存檔 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 1/2 完成
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | AWS OpenClaw 安全文章閱讀 | 碼農1號 | ⬜ pending |
-| T002 | Session 完整對話 log 存檔 | 樂樂 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- 由 ideas2tasks 自動建立
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

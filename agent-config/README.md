@@ -1,31 +1,28 @@
 # agent-config
 
-## 概覽
-QClaw Agent 配置優化與 OpenRouter 整合問題排查。解決 agent auth、model fallback、用量限制等問題。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `/Users/claw/howto/qclaw-agent-config-management.md` | Agent 配置管理文檔 |
-| `/Users/claw/howto/qclaw-usage-limit-solution.md` | 用量限制解決方案 |
-| `/Users/claw/howto/openrouter-model-switching.md` | OpenRouter model 切換指南 |
-| `/Users/claw/howto/qclaw-cli-usage.md` | QClaw CLI 使用方式 |
-| `/Users/claw/howto/clawsec-security-analysis.md` | ClawSec 安全建議分析 |
-| `/Users/claw/.qclaw/workspace/scripts/sync_tasks.sh` | Tasks 備份腳本 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | OpenRouter API key 配置問題排查 | 未指派 | 中 | ✅ done |
+| T2 | QClaw agent 配置修改建議 | 未指派 | 中 | ✅ done |
+| T3 | 快速切換 OpenRouter model 方案 | 未指派 | 中 | ✅ done |
+| T4 | QClaw 環境下 openclaw CLI 使用方式 | 未指派 | 中 | ✅ done |
+| T5 | ClawSec 安全建議分析 | 未指派 | 中 | ✅ done |
+| T6 | Tasks 備份腳本 + 排程 | 未指派 | 中 | ✅ done |
+| T7 | QClaw 用量限制解決方案 | 未指派 | 中 | ✅ done |
+| T8 | 安安 agent fallback 機制驗證 | 未指派 | 中 | ✅ done |
+| T8-1 | 解決 T001 API key 問題 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 8/8 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | OpenRouter API key 配置問題排查 | 碼農 1 號 | ✅ done |
-| T002 | QClaw agent 配置修改建議 | 碼農 1 號 | ✅ done |
-| T003 | 快速切換 OpenRouter model 方案 | 碼農 2 號 | ✅ done |
-| T004 | QClaw 環境下 openclaw CLI 使用方式 | 碼農 2 號 | ✅ done |
-| T005 | ClawSec 安全建議分析 | 碼農 1 號 | ✅ done |
-| T006 | Tasks 備份腳本 + 排程 | 碼農 1 號 | ✅ done |
-| T007 | QClaw 用量限制解決方案 | 碼農 2 號 | ✅ done |
-| T008 | 安安 agent fallback 機制驗證 | 安安 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- 團隊分工：Planner: 豪 | Coder 1: 碼農 1 號 | Coder 2: 碼農 2 號 | DocWriter: 安安 | Reviewer: 樂樂
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

@@ -1,30 +1,22 @@
 # gold-analysis-platform
 
-## 概覽
-黃金價格多維度決策輔助系統 - 平台功能。包含 API 開發、社區功能、移動端應用。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | API 開發和文檔 | 未指派 | 中 | ✅ done |
+| T2 | 社區功能 | 未指派 | 中 | ✅ done |
+| T3 | 移動端應用（React Native） | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 0/3 完成
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | API 開發和文檔 | 安安 | ⬜ pending |
-| T002 | 社區功能 | 安安 | ⬜ pending |
-| T003 | 移動端應用（React Native） | 安安 | ⬜ pending |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 預估時程
-~7 個工作天
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-## 前置依賴
-- gold-analysis-core 專案完成
-- gold-analysis-extend T005（多語言支持）完成後再執行 T003
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
 
-## 依賴關係
-```
-core-T011 → T001 → T002
-extend-T005 → T003
-```
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

@@ -1,25 +1,26 @@
-# openclaw-scrum 專案
+# openclaw-scrum
 
-## 概述
-由 ideas2tasks 自動建立的任務。
+## 任務狀態
 
-## Tasks 清單
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 研究openclaw敏捷任務自動化相關資料及實作方式 | 未指派 | 中 | ⬜ pending |
+| T2 | 研究適合本地落實的實作方案，並進行評估及確認後規劃實作後續及追蹤其成效 | 未指派 | 中 | ⬜ pending |
+| T3 | 本地目前團隊是否需要增加一位資料研究員，研究 增加一位資料研究員 的相關配置檔，並給出一個推薦及完整 | 未指派 | 中 | ⬜ pending |
+| T4 | review目前所有團員的的相關配置檔，並提供改善建議之配置檔。 | 未指派 | 中 | ⬜ pending |
+| T5 | 研究是否有適合本地的 IDEAS 及 任務 及 產出的HOWTO 及 專案 的面板可以方便追蹤使用？ | 未指派 | 中 | ⬜ pending |
+| T6 | 專案任務的分派後執行的狀態在qcalw app上，是看不到處理過程的？是否有辦法可以看到？ | 未指派 | 中 | ⬜ pending |
+| T7 | 研究目前推薦且安全的openclaw skills及plugins，以免費使用為主。且要附上簡易描述 | 未指派 | 中 | ⬜ pending |
 
-| Task | 標題 | 負責人 | 優先級 | 狀態 |
-|------|------|--------|--------|------|
-| T015 | 研究openclaw敏捷任務自動化相關資料及實作方式 | 碼農 1 號 | medium | pending |
-| T016 | 研究適合本地落實的實作方案，並進行評估及確認後規劃實作後續及 | 安安 | medium | pending |
-| T017 | 本地目前團隊是否需要增加一位資料研究員，研究 增加一位資料研 | 碼農 1 號 | medium | pending |
-| T018 | review目前所有團員的的相關配置檔，並提供改善建議之配置 | 安安 | medium | pending |
-| T019 | 研究是否有適合本地的 IDEAS 及 任務 及 產出的HOW | 碼農 1 號 | medium | pending |
-| T020 | 專案任務的分派後執行的狀態在qcalw app上，是看不到處 | 安安 | medium | pending |
-| T021 | 研究目前推薦且安全的openclaw skills及plug | 碼農 1 號 | medium | pending |
+## 更新規範
 
-## 進度
-- **完成**: 0/7
-- **進行中**: 0
-- **待處理**: 7
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
----
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-_建立日期: 2026-04-10_
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

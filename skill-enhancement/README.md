@@ -1,24 +1,23 @@
 # skill-enhancement
 
-## 概覽
-增強 Prompt Injection Filter Skill 的功能，包括：summary 加中英文說明、正規表示式改為外部參考檔、規劃自動更新 LIST 機制。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `~/.qclaw/workspace/skills/prompt-injection-filter/SKILL.md` | 中英文 summary |
-| `~/.qclaw/workspace/skills/prompt-injection-filter/patterns.json` | 外部化規則檔 |
-| `~/.qclaw/workspace/skills/prompt-injection-filter/filter.py` | 支援外部載入 + reload |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 更新 ideas2tasks Skill summary | 未指派 | 中 | ✅ done |
+| T2 | 拆分 ideas2tasks 中的關鍵 regex | 未指派 | 中 | ✅ done |
+| T3 | 研究 Skill 自動更新機制 | 未指派 | 中 | ✅ done |
+| T4 | 設計並實作更新機制 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 4/4 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 更新 ClawHub Skill summary（中英） | 寶寶 | ✅ done |
-| T002 | 拆分 regex 到外部檔案 | 碼農 1 號 | ✅ done |
-| T003 | 研究自動更新來源可行性 | 寶寶 | ✅ done |
-| T004 | 設計更新機制 | 寶寶 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 來源
-- Idea 檔案: `/Users/claw/Ideas/security-update.txt`
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
+
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

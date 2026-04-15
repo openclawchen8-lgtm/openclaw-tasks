@@ -1,24 +1,25 @@
-# openclaw 專案
+# openclaw
 
-## 概述
-由 ideas2tasks 自動建立的任務。
+## 任務狀態
 
-## Tasks 清單
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | QClaw + OpenClaw 雙開配置指南（不同 Port + Local LLM） | 未指派 | 中 | ✅ done |
+| T2 | 任務 T002 | 未指派 | 中 | ✅ done |
+| T3 | How to install pre-defined openclaw skills without | 未指派 | 中 | ✅ done |
+| T4 | How to install pre-defined openclaw plugins withou | 未指派 | 中 | ✅ done |
+| T5 | How to create pre-defined members with agents's de | 未指派 | 中 | ✅ done |
+| T6 | OpenClaw Cron 備份與還原 | 未指派 | 中 | ✅ done |
 
-| Task | 標題 | 負責人 | 優先級 | 狀態 |
-|------|------|--------|--------|------|
-| T031 | How to install and start OpenC | 碼農 1 號 | medium | pending |
-| T032 | How to install openclaw with n | 安安 | medium | pending |
-| T033 | How to install pre-defined ope | 碼農 1 號 | medium | pending |
-| T034 | How to install pre-defined ope | 安安 | medium | pending |
-| T035 | How to create pre-defined memb | 碼農 1 號 | medium | pending |
-| T036 | How to backup and restore for  | 安安 | medium | pending |
+## 更新規範
 
-## 進度
-- **完成**: 0/6
-- **進行中**: 0
-- **待處理**: 6
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
----
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-_建立日期: 2026-04-10_
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

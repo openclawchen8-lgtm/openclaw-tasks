@@ -1,20 +1,23 @@
-# working-issue 專案
+# working-issue
 
-## 概述
-由 ideas2tasks 自動建立的任務。
+## 任務狀態
 
-## Tasks 清單
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | Gateway 不穩定與任務中斷預防實作方式報告 | 未指派 | 中 | ✅ done |
+| T2 | git 配置異動確認流程規範 | 未指派 | 中 | ✅ done |
+| T3 | 如何防止專案或任務啟動後，因 Gateway 不穩定或任何原 | 未指派 | 中 | ⬜ pending |
+| T4 | 日後git配置的相關異動(包含新增,修改,刪除)，皆與和我先 | 未指派 | 中 | ⬜ pending |
 
-| Task | 標題 | 負責人 | 優先級 | 狀態 |
-|------|------|--------|--------|------|
-| T003 | 如何防止專案或任務啟動後，因 Gateway 不穩定或任何原 | 碼農 1 號 | medium | pending |
-| T004 | 日後git配置的相關異動(包含新增,修改,刪除)，皆與和我先 | 碼農 2 號 | high | pending |
+## 更新規範
 
-## 進度
-- **完成**: 0/2
-- **進行中**: 0
-- **待處理**: 2
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
----
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-_建立日期: 2026-04-10_
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12

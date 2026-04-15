@@ -1,25 +1,24 @@
 # security-tools
 
-## 概覽
-針對本地 OpenClaw 環境進行安全評估與改善，依據教學文章逐一檢查 5 個安全設定，彙整作法並更新至 howto。
+## 任務狀態
 
-## 📁 產出檔案（可查看）
-| 檔案 | 說明 |
-|------|------|
-| `/Users/claw/howto/openclaw-security-check.md` | 安全評估報告 |
+| Task | 標題 | 負責人 | 優先順序 | 狀態 |
+|------|------|--------|---------|------|
+| T1 | 讀取並分析兩篇安全文章 | 未指派 | 中 | ✅ done |
+| T1-1 | 逐一檢查 5 個安全設定 | 未指派 | 中 | ✅ done |
+| T2 | 逐一檢查 5 個安全設定 | 未指派 | 中 | ✅ done |
+| T3 | 彙整作法寫入 howto | 未指派 | 中 | ✅ done |
+| T4 | 記錄 exec 審批決策過程 | 未指派 | 中 | ✅ done |
 
-## 📋 任務狀態
-**進度**: 4/4 完成 ✅
+## 更新規範
 
-| ID | 任務 | 負責人 | 狀態 |
-|----|------|--------|------|
-| T001 | 讀取並分析兩篇安全文章 | 寶寶 | ✅ done |
-| T002 | 逐一檢查 5 個安全設定 | 寶寶 | ✅ done |
-| T003 | 彙整作法寫入 howto | 安安 | ✅ done |
-| T004 | 記錄 exec 審批決策過程 | 寶寶 | ✅ done |
+每次狀態變更時，**同時更新** T\*.md 與本檔案：
 
-## 衍生專案
-- `/Users/claw/Tasks/security-improvements/` — 7 個後續改善項目
+**pending → in-progress**：T\*.md 改 `status: in-progress`，README 改 `⬜ pending` → `🔄 in-progress`
 
-## 來源
-- Idea 檔案: `/Users/claw/Ideas/security.txt`
+**in-progress → done**：T\*.md 改 `status: done`，README 改 `🔄 in-progress` → `✅ done`
+
+- 更新 T\*.md 時一併更新 `updated` 欄位
+- 完成後同步 GitHub Issue 狀態（`--sync-state`）
+
+> 自動生成於 2026-04-15 19:12
