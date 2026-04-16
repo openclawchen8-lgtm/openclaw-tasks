@@ -1,6 +1,6 @@
 # 📅 Daily Dashboard - 2026-04-16
 
-> 最後更新: 2026-04-16 21:13 · 自動生成
+> 最後更新: 2026-04-16 22:18 · 自動生成
 
 ---
 
@@ -23,8 +23,9 @@
 | gold-analysis-core | T004-D | D - 修復異常檢測測試 |
 | gold-analysis-improve | T001 | 修正 gold-analysis 單位錯誤 |
 | gold-analysis-improve | T002 | gold-analysis 增加 TradingView 資料來源 |
-| gold-monitor-issue | T003 | 請依照修正後結果，更新TASK及HOWTO。並回報完成進度及狀況。 |
-| gold-monitor-issue | T004 | 更新為同時顯示黃金存摺買入/賣出價格 |
+| gold-monitor-issue | T003 | 更新 TASK 格式及 HOWTO 文件，彙整完成進度 |
+| gold-monitor-issue | T005 | 請檢查及修正 黃金存摺價格監控 的問題（見 T001） |
+| gold-monitor-issue | T006 | 更新為同時抓取及顯示 黃金存摺 賣出 買入 價格（見 T004） |
 | ideas2tasks-fix | T001 | classify.py 只取 task.N 區段，忽略對話雜訊 |
 | ideas2tasks-fix | T002 | lifecycle.py 加回自動歸檔到 _done/ |
 | ideas2tasks-fix | T003 | executor.py 去重加強：比對描述前 100 字元 |
@@ -62,9 +63,9 @@
 | gold-analysis-core | T004-B | B - 實現清洗模組 |
 | gold-analysis-core | T004-C | C - 實現報告模組與整合測試 |
 | gold-analysis-improve | T003 | gold-analysis 增加 https://tw. |
-| gold-monitor-issue | T001 | 請檢查及修正 黃金存摺價格監控 的問題。發現歷史資料有誤，故顯形無法正常顯示 |
-| gold-monitor-issue | T002 | 請排定後續觀察及回報驗證狀況，持續三天，每天個檢查及比對線上價位是否與監控相同並回報比對結果 |
-| gold-monitor-issue | T004 | 更新為同時顯示黃金存摺買入/賣出價格 |
+| gold-monitor-issue | T001 | 修復歷史資料與固定基準比較邏輯（state file → history["daily"]） |
+| gold-monitor-issue | T003 | 更新 TASK 格式及 HOWTO 文件，彙整完成進度 |
+| gold-monitor-issue | T004 | 實時顯示黃金存摺買入/賣出雙價格 |
 | ideas2tasks-fix | T001 | classify.py 只取 task.N 區段，忽略對話雜訊 |
 | ideas2tasks-fix | T002 | lifecycle.py 加回自動歸檔到 _done/ |
 | ideas2tasks-fix | T003 | executor.py 去重加強：比對描述前 100 字元 |
@@ -111,9 +112,6 @@ _無_
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
 | gold-analysis-improve | T001 | 修正 gold-analysis 單位錯誤 |  |
 | gold-analysis-improve | T002 | gold-analysis 增加 TradingView 資料來源 |  |
-| gold-monitor-issue | T003 | 請依照修正後結果，更新TASK及HOWTO。並回報完成進度及狀況。 |  |
-| gold-monitor-issue | T005 | T005 |  |
-| gold-monitor-issue | T006 | T006 |  |
 | llm-router | T001 | 研究下列這幾篇，並給出 2025 best自建llm router評估報告(md及pdf) |  |
 | openclaw-scrum | T008 | T008 |  |
 | revenue-zero-cost | T004 | 撰寫產品說明頁與功能對比表 |  |
