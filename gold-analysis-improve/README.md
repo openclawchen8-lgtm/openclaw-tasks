@@ -6,7 +6,7 @@
 |------|------|--------|---------|------|
 | T1 | 任務 T001 | 未指派 | 中 | ⬜ pending |
 | T2 | 任務 T002 | 未指派 | 中 | ⬜ pending |
-| T3 | gold-analysis 增加 https://tw. | 未指派 | 中 | ⬜ pending |
+| T3 | gold-analysis 增加 https://tw. | 未指派 | 中 | ✅ done |
 
 ## 更新規範
 
@@ -19,4 +19,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-15 19:12
+> 自動生成於 2026-04-16 19:02
