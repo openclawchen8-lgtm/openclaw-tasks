@@ -5,7 +5,7 @@
 | Task | 標題 | 負責人 | 優先順序 | 狀態 |
 |------|------|--------|---------|------|
 | T1 | QClaw + OpenClaw 雙開配置指南（不同 Port + Local LLM） | 未指派 | 中 | ✅ done |
-| T2 | 任務 T002 | 未指派 | 中 | ✅ done |
+| T2 | How to install openclaw with npm under macbook whe | 未指派 | 中 | ✅ done |
 | T3 | How to install pre-defined openclaw skills without | 未指派 | 中 | ✅ done |
 | T4 | How to install pre-defined openclaw plugins withou | 未指派 | 中 | ✅ done |
 | T5 | How to create pre-defined members with agents's de | 未指派 | 中 | ✅ done |
@@ -22,4 +22,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-16 19:02
+> 自動生成於 2026-04-16 20:01
