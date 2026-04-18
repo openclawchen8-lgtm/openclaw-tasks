@@ -1,6 +1,6 @@
-# 📅 Daily Dashboard - 2026-04-17
+# 📅 Daily Dashboard - 2026-04-18
 
-> 最後更新: 2026-04-17 22:09 · 自動生成
+> 最後更新: 2026-04-18 18:33 · 自動生成
 
 ---
 
@@ -18,15 +18,15 @@ _無_
 
 ## 🔥 待處理高優先級
 
-_無_
+| 專案 | 任務 | 標題 | 優先 |
+| -- | -- | -- | -- |
+| gold-analysis-merge | T001 | 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本 | high |
 
 ---
 
 ## 🔄 進行中
 
-| 專案 | 任務 | 標題 |
-| -- | -- | -- |
-| gold-analysis-core | T004-D | D - 修復異常檢測測試 |
+_無_
 
 ---
 
@@ -34,14 +34,17 @@ _無_
 
 | 專案 | 任務 | 標題 | 優先 |
 | -- | -- | -- | -- |
+| gold-analysis-merge | T001 | 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本 | high |
 | gold-analysis-advanced | T001 | 機器學習模型開發 | medium |
 | gold-analysis-advanced | T002 | ML 模型整合與優化 | medium |
 | gold-analysis-advanced | T003 | 實盤交易接口設計 | medium |
 | gold-analysis-advanced | T004 | 實盤交易對接 | medium |
 | github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
-| gold-analysis-improve | T001 | 修正 gold-analysis 單位錯誤 |  |
-| gold-analysis-improve | T002 | gold-analysis 增加 TradingView 資料來源 |  |
+| gold-analysis-improve | T004 | TradingView 技術分析分頁 |  |
+| gold-analysis-improve | T005 | TradingView 遠期曲線分頁 |  |
+| gold-analysis-improve | T006 | TradingView 季節性分頁 |  |
+| gold-analysis-improve | T007 | TradingView 合約分頁 |  |
 | gold-monitor-issue | T007 | T007 |  |
 | gold-monitor-issue | T008 | T008 |  |
 | openclaw-scrum | T008 | T008 |  |
