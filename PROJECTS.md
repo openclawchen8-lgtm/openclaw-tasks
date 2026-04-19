@@ -1,6 +1,6 @@
 # 📁 Projects Dashboard
 
-> 最後更新: 2026-04-18 18:33 · 自動生成
+> 最後更新: 2026-04-19 12:55 · 自動生成
 
 ---
 
@@ -9,18 +9,21 @@
 | 指標 | 數量 |
 |------|------|
 | 專案數 | 29 |
-| 任務總數 | 164 |
-| ✅ 已完成 | 137 |
-| ⬜ 待處理 | 24 |
-| 🔄 進行中 | 0 |
+| 任務總數 | 168 |
+| ✅ 已完成 | 142 |
+| ⬜ 待處理 | 22 |
+| 🔄 進行中 | 1 |
 | ⏭️ 跳過 | 3 |
-| 總完成率 | 83% |
+| 總完成率 | 84% |
 
 ## 🔥 待處理高優先級任務
 
 | 專案 | 任務 | 標題 |
 |------|------|------|
-| gold-analysis-merge | T001 | 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本 |
+| gold-analysis-improve | T008 | T008 - 接 Yahoo Finance 歷史黃金報價，補足技術分析所需數據 |
+| gold-analysis-improve | T009 | T009 - 統一 SQLite 資料來源 + 台灣銀行 1 年歷史數據 |
+| gold-analysis-improve | T010 | T010 - gold_bot_history.py 重構：DB自動建立 + gap-filling |
+| gold-analysis-improve | T012 | T012 - gold_monitor_pro 架構重構：移除 SQLite 寫入，改用 tmp file 即時檢查 |
 
 ---
 
@@ -37,9 +40,12 @@
 | ⬜ | gold-analysis-advanced | 4 | 0 | 4 | 0 | ░░░░░░░░░░░░░░░░░░░░ 0% | 2026-04-07 |
 | ⏭️ | gold-analysis-core | 29 | 28 | 0 | 0 | ███████████████████░ 96% | 2026-04-16 |
 | ✅ | gold-analysis-extend | 6 | 6 | 0 | 0 | ████████████████████ 100% | 2026-04-07 |
-| ⬜ | gold-analysis-improve | 7 | 3 | 4 | 0 | ████████░░░░░░░░░░░░ 42% | 2026-04-17 |
-| ⬜ | gold-analysis-merge | 1 | 0 | 1 | 0 | ░░░░░░░░░░░░░░░░░░░░ 0% | 2026-04-17 |
-  **T001**: 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本
+| 🔄 | gold-analysis-improve | 11 | 7 | 3 | 1 | ████████████░░░░░░░░ 63% | 2026-04-18 |
+  **T008**: T008 - 接 Yahoo Finance 歷史黃金報價，補足技術分析所需數據
+  **T009**: T009 - 統一 SQLite 資料來源 + 台灣銀行 1 年歷史數據
+  **T010**: T010 - gold_bot_history.py 重構：DB自動建立 + gap-filling
+  **T012**: T012 - gold_monitor_pro 架構重構：移除 SQLite 寫入，改用 tmp file 即時檢查
+| ✅ | gold-analysis-merge | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-18 |
 | ✅ | gold-analysis-platform | 3 | 3 | 0 | 0 | ████████████████████ 100% | 2026-04-07 |
 | ⬜ | gold-monitor-issue | 8 | 4 | 2 | 0 | ██████████░░░░░░░░░░ 50% | 2026-04-16 |
 | ✅ | ideas2tasks | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |

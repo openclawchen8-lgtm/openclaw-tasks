@@ -1,6 +1,6 @@
-# 📅 Daily Dashboard - 2026-04-18
+# 📅 Daily Dashboard - 2026-04-19
 
-> 最後更新: 2026-04-18 18:33 · 自動生成
+> 最後更新: 2026-04-19 12:55 · 自動生成
 
 ---
 
@@ -20,13 +20,17 @@ _無_
 
 | 專案 | 任務 | 標題 | 優先 |
 | -- | -- | -- | -- |
-| gold-analysis-merge | T001 | 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本 | high |
+| gold-analysis-improve | T008 | T008 - 接 Yahoo Finance 歷史黃金報價，補足技術分析所需數據 | high |
+| gold-analysis-improve | T009 | T009 - 統一 SQLite 資料來源 + 台灣銀行 1 年歷史數據 | high |
+| gold-analysis-improve | T012 | T012 - gold_monitor_pro 架構重構：移除 SQLite 寫入，改用 tmp file 即時檢查 | high |
 
 ---
 
 ## 🔄 進行中
 
-_無_
+| 專案 | 任務 | 標題 |
+| -- | -- | -- |
+| gold-analysis-improve | T010 | T010 - gold_bot_history.py 重構：DB自動建立 + gap-filling |
 
 ---
 
@@ -34,17 +38,15 @@ _無_
 
 | 專案 | 任務 | 標題 | 優先 |
 | -- | -- | -- | -- |
-| gold-analysis-merge | T001 | 合併 ~/gold-analysis 與 ~/Projects/gold-analysis 兩份本地副本 | high |
+| gold-analysis-improve | T008 | T008 - 接 Yahoo Finance 歷史黃金報價，補足技術分析所需數據 | high |
+| gold-analysis-improve | T009 | T009 - 統一 SQLite 資料來源 + 台灣銀行 1 年歷史數據 | high |
+| gold-analysis-improve | T012 | T012 - gold_monitor_pro 架構重構：移除 SQLite 寫入，改用 tmp file 即時檢查 | high |
 | gold-analysis-advanced | T001 | 機器學習模型開發 | medium |
 | gold-analysis-advanced | T002 | ML 模型整合與優化 | medium |
 | gold-analysis-advanced | T003 | 實盤交易接口設計 | medium |
 | gold-analysis-advanced | T004 | 實盤交易對接 | medium |
 | github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
-| gold-analysis-improve | T004 | TradingView 技術分析分頁 |  |
-| gold-analysis-improve | T005 | TradingView 遠期曲線分頁 |  |
-| gold-analysis-improve | T006 | TradingView 季節性分頁 |  |
-| gold-analysis-improve | T007 | TradingView 合約分頁 |  |
 | gold-monitor-issue | T007 | T007 |  |
 | gold-monitor-issue | T008 | T008 |  |
 | openclaw-scrum | T008 | T008 |  |
