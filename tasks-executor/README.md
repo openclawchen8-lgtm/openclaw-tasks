@@ -4,11 +4,11 @@
 
 | Task | 標題 | 負責人 | 優先順序 | 狀態 |
 |------|------|--------|---------|------|
-| T1 | 設計 tasks-executor 規格 | 未指派 | 中 | ✅ done |
-| T2 | 實作 tasks-executor 核心 | 未指派 | 中 | ✅ done |
-| T3 | 實作 lifecycle.py 狀態管理 | 未指派 | 中 | ✅ done |
-| T4 | 驗證任務執行器 | 未指派 | 中 | ✅ done |
-| T5 | 建立 Cron 自動化排程 | 未指派 | 中 | ✅ done |
+| T1 | 設計 tasks-executor 規格 | 寶寶 | 中 | ✅ done |
+| T2 | 實作 tasks-executor 核心 | 碼農 2 號 | 中 | ✅ done |
+| T3 | 實作 lifecycle.py 狀態管理 | 碼農 2 號 | 中 | ✅ done |
+| T4 | 驗證任務執行器 | 樂樂 | 中 | ✅ done |
+| T5 | 建立 Cron 自動化排程 | 寶寶 | 中 | ✅ done |
 
 ## 更新規範
 
@@ -21,4 +21,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-18 20:32
+> 自動生成於 2026-04-21 16:35

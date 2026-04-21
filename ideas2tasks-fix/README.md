@@ -8,7 +8,7 @@
 | T2 | lifecycle.py 加回自動歸檔到 _done/ | 未指派 | 中 | ✅ done |
 | T3 | executor.py 去重加強：比對描述前 100 字元 | 未指派 | 中 | ✅ done |
 | T4 | 方案 A：Sub-agent 完成後強制更新 Task Status | 未指派 | 中 | ✅ done |
-| T5 | 方案 B：task_audit.py 主動稽核系統 | 未指派 | 中 | ✅ done |
+| T5 | 方案 B：task_audit.py 主動稽核系統 | None | 中 | ✅ done |
 
 ## 更新規範
 
@@ -21,4 +21,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-18 20:32
+> 自動生成於 2026-04-21 16:35

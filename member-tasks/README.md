@@ -4,11 +4,11 @@
 
 | Task | 標題 | 負責人 | 優先順序 | 狀態 |
 |------|------|--------|---------|------|
-| T1 | 建立安安（DocWriter）workspace | 未指派 | 中 | ✅ done |
-| T2 | 建立樂樂（Reviewer）workspace | 未指派 | 中 | ✅ done |
-| T3 | 建立碼農2號（Coder 2）workspace | 未指派 | 中 | ✅ done |
-| T4 | 註冊所有成員到 openclaw.json + gateway 重啟 | 未指派 | 中 | ✅ done |
-| T5 | 產出 howto 文檔 | 未指派 | 中 | ✅ done |
+| T1 | 建立安安（DocWriter）workspace | 安安 | 中 | ✅ done |
+| T2 | 建立樂樂（Reviewer）workspace | 樂樂 | 中 | ✅ done |
+| T3 | 建立碼農2號（Coder 2）workspace | 碼農2號 | 中 | ✅ done |
+| T4 | 註冊所有成員到 openclaw.json + gateway 重啟 | 豪 | 中 | ✅ done |
+| T5 | 產出 howto 文檔 | 安安 | 中 | ✅ done |
 
 ## 更新規範
 
@@ -21,4 +21,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-18 20:32
+> 自動生成於 2026-04-21 16:35

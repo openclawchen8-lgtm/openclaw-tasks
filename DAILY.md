@@ -1,12 +1,15 @@
-# 📅 Daily Dashboard - 2026-04-20
+# 📅 Daily Dashboard - 2026-04-21
 
-> 最後更新: 2026-04-20 18:07 · 自動生成
+> 最後更新: 2026-04-21 15:44 · 自動生成
 
 ---
 
 ## 🆕 今日新增任務
 
-_無_
+| 專案 | 任務 | 標題 |
+| -- | -- | -- |
+| lifecycle-sync-fix | T001 | 修正 lifecycle.py 子任務統計邏輯 |
+| lifecycle-sync-fix | T002 | sync_issues_cron.py 反向同步機制 |
 
 ---
 
@@ -24,7 +27,9 @@ _無_
 
 ## 🔄 進行中
 
-_無_
+| 專案 | 任務 | 標題 |
+| -- | -- | -- |
+| revenue-zero-cost | T008 | 技術社群曝光 |
 
 ---
 
@@ -38,15 +43,8 @@ _無_
 | gold-analysis-advanced | T004 | 實盤交易對接 | medium |
 | github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
-| revenue-zero-cost | T004 | 撰寫產品說明頁與功能對比表 |  |
-| revenue-zero-cost | T006 | 製作案例作品集 |  |
-| revenue-zero-cost | T007 | 建立服務諮詢流程 |  |
-| revenue-zero-cost | T008 | 技術社群曝光 |  |
-| revenue-zero-cost | T009 | 撰寫「零成本打造監控系統」技術文 |  |
-| revenue-zero-cost | T010 | 規劃付費教程大綱 |  |
-| revenue-zero-cost | T011 | 建立內容發布排程 |  |
-| session-logger-plugin | T003 | Session 攔截與格式化邏輯 |  |
-| session-logger-plugin | T004 | 檔案輸出與滾動策略 |  |
+| lifecycle-sync-fix | T001 | 修正 lifecycle.py 子任務統計邏輯 |  |
+| lifecycle-sync-fix | T002 | sync_issues_cron.py 反向同步機制 |  |
 | session-logger-plugin | T005 | 安裝與測試驗證 |  |
 
 ---

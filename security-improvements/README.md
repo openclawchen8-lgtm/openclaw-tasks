@@ -4,13 +4,13 @@
 
 | Task | 標題 | 負責人 | 優先順序 | 狀態 |
 |------|------|--------|---------|------|
-| T1 | API Key 改用環境變數 | 未指派 | 中 | ✅ done |
-| T2 | 確認 .gitignore 設定 | 未指派 | 中 | ✅ done |
-| T3 | 鎖定敏感檔案 | 未指派 | 中 | ✅ done |
-| T4 | 設定 tools.allow/deny | 未指派 | 中 | ✅ done |
-| T5 | 設定用量報告 cron | 未指派 | 中 | ✅ done |
-| T6 | 檢查 GitHub token 權限 | 未指派 | 中 | ✅ done |
-| T7 | 評估 LLM spending limit | 未指派 | 中 | ✅ done |
+| T1 | API Key 改用環境變數 | 碼農 1 號 | 中 | ✅ done |
+| T2 | 確認 .gitignore 設定 | 寶寶 | 中 | ✅ done |
+| T3 | 鎖定敏感檔案 | 碼農 1 號 | 中 | ✅ done |
+| T4 | 設定 tools.allow/deny | 寶寶 | 中 | ✅ done |
+| T5 | 設定用量報告 cron | 寶寶 | 中 | ✅ done |
+| T6 | 檢查 GitHub token 權限 | 寶寶 | 中 | ✅ done |
+| T7 | 評估 LLM spending limit | 寶寶 | 中 | ✅ done |
 
 ## 更新規範
 
@@ -23,4 +23,4 @@
 - 更新 T\*.md 時一併更新 `updated` 欄位
 - 完成後同步 GitHub Issue 狀態（`--sync-state`）
 
-> 自動生成於 2026-04-18 20:32
+> 自動生成於 2026-04-21 16:35
