@@ -1,9 +1,18 @@
 /**
- * Session Logger Plugin
+ * Session Logger Plugin v2
  * 
  * Hooks into OpenClaw events to capture and persist session data.
+ * Uses actual OpenClaw hooks: message:received, message:sent, agent:bootstrap, etc.
  */
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
+
+// InternalHookEvent type (from openclaw/dist/plugin-sdk/hooks/internal-hooks.d.ts)
+interface InternalHookEvent {
+  type: "command" | "session" | "agent" | "gateway" | "message";
+  action: string;
+  sessionKey: string;
+  context?: Record<string, unknown>;
+}
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
@@ -71,7 +80,7 @@ const defaultConfig: SessionLoggerConfig = {
 const sessionLoggerPlugin = {
   id: "session-logger",
   name: "Session Logger",
-  description: "Auto-save complete session logs with thinking process and tool calls",
+  description: "Auto-save complete session logs with message capture",
 
   configSchema: {
     parse(value: unknown) {
@@ -85,14 +94,17 @@ const sessionLoggerPlugin = {
 
   register(api: OpenClawPluginApi) {
     // Get runtime config (merged with defaults)
-    const config = sessionLoggerPlugin.configSchema.parse(api.config);
+    const rawConfig = (api.config && typeof api.config === 'object' && !Array.isArray(api.config))
+      ? (api.config as Record<string, unknown>)
+      : {};
+    const config: SessionLoggerConfig = { ...defaultConfig, ...rawConfig };
 
     if (!config.enabled) {
       api.logger.info("Session Logger plugin disabled");
       return;
     }
 
-    api.logger.info("Session Logger plugin starting", { config });
+    api.logger.info("Session Logger plugin starting");
 
     // Track current session file handle
     let currentSessionFile: fs.WriteStream | null = null;
@@ -119,16 +131,11 @@ const sessionLoggerPlugin = {
       if (config.rollingType === "size" && !forceNew && currentFilePath) {
         const size = getFileSizeMb(currentFilePath);
         if (size >= config.maxFileSizeMb) {
-          // Roll to new file with sequence number
           const ext = path.extname(filename);
           const base = path.basename(filename, ext);
           const seq = Date.now();
           const newFilename = `${base}_${seq}${ext}`;
-          api.logger.info("Rolling file due to size", { 
-            oldSize: size, 
-            maxSize: config.maxFileSizeMb,
-            newFile: newFilename 
-          });
+          api.logger.info(`Rolling file: ${size.toFixed(2)}MB >= ${config.maxFileSizeMb}MB`);
           return path.join(expandPath(config.outputDir), newFilename);
         }
       }
@@ -138,7 +145,7 @@ const sessionLoggerPlugin = {
 
     // Helper to write log entry
     const writeLog = (sessionKey: string, entry: object): void => {
-      if (!config.enabled) return;
+      if (!config.enabled || !sessionKey) return;
 
       // Determine if we need a new file based on rolling type
       let shouldRotate = false;
@@ -158,18 +165,17 @@ const sessionLoggerPlugin = {
         currentDate = getDateStr();
         currentFilePath = createSessionFile(sessionKey, true);
         currentSessionFile = fs.createWriteStream(currentFilePath, { flags: "a" });
-        api.logger.info("Session log started", { sessionKey, filepath: currentFilePath });
+        api.logger.info(`Session log started: ${sessionKey}`);
       }
 
       // Check size-based rolling during write
       if (config.rollingType === "size" && currentFilePath && currentSessionFile) {
         const size = getFileSizeMb(currentFilePath);
         if (size >= config.maxFileSizeMb) {
-          // Force rotate
           currentSessionFile.end();
           currentFilePath = createSessionFile(sessionKey, true);
           currentSessionFile = fs.createWriteStream(currentFilePath, { flags: "a" });
-          api.logger.info("Size-based rotation", { size, maxSize: config.maxFileSizeMb });
+          api.logger.info(`Size-based rotation: ${size.toFixed(2)}MB`);
         }
       }
 
@@ -201,104 +207,91 @@ const sessionLoggerPlugin = {
           if (stats.mtimeMs < cutoffTime) {
             fs.unlinkSync(filepath);
             deletedCount++;
-            api.logger.info("Deleted old session log", { file, age: stats.mtimeMs });
           }
-        } catch (e) {
+        } catch {
           // Skip files we can't access
         }
       }
 
       if (deletedCount > 0) {
-        api.logger.info("Retention cleanup complete", { deletedCount, keptDays: config.retentionDays });
+        api.logger.info(`Retention cleanup: deleted ${deletedCount} files`);
       }
     };
 
     // Run cleanup on startup
     cleanupOldFiles();
 
-    // Hook: session created
-    api.registerHook({
-      name: "session_created",
-      handler: async (event: { sessionKey: string; sessionId: string; agentId?: string }) => {
-        api.logger.info("Session created hook triggered", event);
+    // Helper to extract message content from hook event context
+    const extractMessageContent = (event: InternalHookEvent): string | undefined => {
+      const ctx = event.context as Record<string, unknown> | undefined;
+      if (!ctx) return undefined;
+      
+      const message = ctx.message as Record<string, unknown> | undefined;
+      if (!message) return undefined;
+      
+      const content = message.content;
+      if (typeof content === 'string') return content;
+      if (Array.isArray(content)) {
+        return content.map(c => typeof c === 'string' ? c : c?.text || '').join('\n');
+      }
+      return undefined;
+    };
+
+    // Hook: message received (when message is received from user)
+    api.registerHook("message", async (event: InternalHookEvent) => {
+      if (event.action === "received") {
+        const content = extractMessageContent(event);
+        const ctx = event.context as Record<string, unknown> | undefined;
+        const message = ctx?.message as Record<string, unknown> | undefined;
+        
         writeLog(event.sessionKey, {
-          type: "session_start",
-          sessionId: event.sessionId,
-          agentId: event.agentId || "unknown",
+          type: "message_received",
+          role: message?.role || "user",
+          content: content || "[no content]",
         });
-        return { block: false };
-      },
+      }
     });
 
-    // Hook: message sending (before message is sent)
-    api.registerHook({
-      name: "message_sending",
-      handler: async (event: { 
-        sessionKey: string; 
-        message: { role: string; content?: string; thinking?: string };
-      }) => {
-        const { sessionKey, message } = event;
+    // Hook: message sent (when message is sent to user)
+    api.registerHook("message", async (event: InternalHookEvent) => {
+      if (event.action === "sent") {
+        const content = extractMessageContent(event);
+        const ctx = event.context as Record<string, unknown> | undefined;
+        const message = ctx?.message as Record<string, unknown> | undefined;
         
-        const logEntry: Record<string, unknown> = {
-          type: "message",
-          role: message.role,
-        };
-
-        if (message.content) {
-          logEntry.content = message.content;
-        }
-
-        if (config.includeThinking && message.thinking) {
-          logEntry.thinking = message.thinking;
-        }
-
-        writeLog(sessionKey, logEntry);
-        
-        return { cancel: false };
-      },
+        writeLog(event.sessionKey, {
+          type: "message_sent",
+          role: message?.role || "assistant",
+          content: content || "[no content]",
+        });
+      }
     });
 
-    // Hook: tool call
-    if (config.includeToolCalls) {
-      api.registerHook({
-        name: "tool_call",
-        handler: async (event: {
-          sessionKey: string;
-          toolName: string;
-          params: object;
-          result?: unknown;
-        }) => {
-          writeLog(event.sessionKey, {
-            type: "tool_call",
-            toolName: event.toolName,
-            params: event.params,
-            result: event.result,
-          });
-          return { block: false };
-        },
-      });
-    }
-
-    // Hook: session ended
-    api.registerHook({
-      name: "session_ended",
-      handler: async (event: { sessionKey: string; sessionId: string }) => {
-        api.logger.info("Session ended hook triggered", event);
+    // Hook: agent bootstrap (when agent starts)
+    api.registerHook("agent", async (event: InternalHookEvent) => {
+      if (event.action === "bootstrap") {
+        const ctx = event.context as Record<string, unknown> | undefined;
+        api.logger.info(`Agent bootstrap: ${event.sessionKey}`);
         writeLog(event.sessionKey, {
-          type: "session_end",
-          sessionId: event.sessionId,
+          type: "agent_bootstrap",
+          model: ctx?.model || "unknown",
         });
+      }
+    });
 
-        // Close current file
-        if (currentSessionKey === event.sessionKey && currentSessionFile) {
-          currentSessionFile.end();
-          currentSessionFile = null;
-          currentSessionKey = null;
-          currentFilePath = null;
-        }
-
-        return { block: false };
-      },
+    // Hook: session compaction (before/after)
+    api.registerHook("session", async (event: InternalHookEvent) => {
+      if (event.action === "compact:before") {
+        api.logger.info(`Session compact before: ${event.sessionKey}`);
+        writeLog(event.sessionKey, {
+          type: "session_compact_before",
+        });
+      } else if (event.action === "compact:after") {
+        api.logger.info(`Session compact after: ${event.sessionKey}`);
+        writeLog(event.sessionKey, {
+          type: "session_compact_after",
+        });
+      }
     });
 
     api.logger.info("Session Logger hooks registered");

@@ -371,7 +371,135 @@ session-logger-plugin/
 
 ---
 
-## 7. 參考資源
+## 7. 編譯流程（重要）
+
+### 7.1 編譯環境
+
+- **Node.js**: `/opt/homebrew/bin/node` (v25.9.0)
+- **npm**: 系統自帶
+- **TypeScript**: 透過 `npm install typescript` 安裝
+- **工作目錄**: `~/Library/Application Support/QClaw/openclaw/config/extensions/session-logger/`
+
+### 7.2 tsconfig.json 設定
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "declaration": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["index.ts", "src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test"]
+}
+```
+
+### 7.3 編譯命令
+
+```bash
+cd ~/Library/Application\ Support/QClaw/openclaw/config/extensions/session-logger/
+npm install
+npx tsc
+```
+
+### 7.4 編譯後的目錄結構
+
+```
+session-logger/
+├── index.ts          # 源碼
+├── dist/
+│   ├── index.js      # 編譯後的入口
+│   ├── index.d.ts    # TypeScript 聲明
+│   └── index.js.map  # Source Map
+└── package.json      # 指向 ./dist/index.js
+```
+
+### 7.5 重要：package.json 入口
+
+```json
+{
+  "openclaw": {
+    "extensions": ["./dist/index.js"]
+  }
+}
+```
+
+⚠️ **不要**指向 `.ts` 檔案！必須使用編譯後的 `.js`。
+
+---
+
+## 8. 實際可用的 Hook API（重要！）
+
+### 8.1 OpenClaw 實際的 Hook 系統
+
+經過源碼分析，OpenClaw 的 InternalHookEvent 有以下類型：
+
+```typescript
+type InternalHookEventType = "command" | "session" | "agent" | "gateway" | "message";
+```
+
+### 8.2 實際存在的 Hook 事件
+
+| type | action | 說明 |
+|------|--------|------|
+| `"agent"` | `"bootstrap"` | Agent 啟動時 |
+| `"message"` | `"received"` | 收到用戶消息 |
+| `"message"` | `"sent"` | 發送消息給用戶 |
+| `"message"` | `"transcribed"` | 消息轉錄完成 |
+| `"message"` | `"preprocessed"` | 消息預處理完成 |
+| `"session"` | `"compact:before"` | Session 壓縮前 |
+| `"session"` | `"compact:after"` | Session 壓縮後 |
+| `"command"` | `"stop"` | 命令停止 |
+
+### 8.3 ❌ 不存在的 Hook（原始設計有誤）
+
+以下 Hook 在架構文件中有描述，但**實際不存在於 OpenClaw**：
+- `agent_end`
+- `session_start`
+- `session_end`
+- `llm_input`
+- `llm_output`
+- `before_tool_call`
+- `after_tool_call`
+
+### 8.4 registerHook API 正確用法
+
+```typescript
+// 正確：事件字串 + handler 函數
+api.registerHook("message", async (event: InternalHookEvent) => {
+  if (event.action === "received") {
+    // 處理收到的消息
+  }
+});
+
+// 錯誤：物件形式（不支援）
+api.registerHook({ name: "session_created", handler: async () => {} });
+```
+
+### 8.5 logger API 正確用法
+
+```typescript
+// 正確：只有一個字串參數
+api.logger.info("Session Logger plugin starting");
+
+// 錯誤：兩個參數（不支援）
+api.logger.info("Starting", { config: ... });
+```
+
+---
+
+## 9. 參考資源
 
 ### 7.1 Plugin SDK 源碼位置
 
@@ -388,12 +516,25 @@ session-logger-plugin/
 
 ---
 
-## 8. 總結
+## 11. 總結
 
-OpenClaw Plugin 系統提供完整的 Hook API，足以實現 Session 日誌功能：
-1. `agent_end` Hook 可捕獲完整 Session 消息
-2. `llm_input/output` Hook 可捕獲原始 LLM 輸入輸出
-3. `pluginConfig` 支持配置輸出路徑、滾動策略
-4. `api.runtime.state.resolveStateDir()` 提供狀態存儲路徑
+### 重要發現
 
-下一步：完成 `spec.md` 詳細規格文件。
+OpenClaw Plugin 系統的 Hook API 與原始設計有**重大差異**：
+
+1. ❌ `agent_end`、`session_start`、`session_end` 等 Hook **不存在**
+2. ✅ 實際可用的 Hook：`message:received`、`message:sent`、`agent:bootstrap`、`session:compact:before/after`
+3. ⚠️ 需要重新設計 Plugin 以適配真實的 OpenClaw API
+
+### Plugin 設計調整
+
+由於 `agent_end` Hook 不存在，Session Logger 必須：
+1. 使用 `message:received` / `message:sent` 捕捉個別消息
+2. 使用 `session:compact:before/after` 捕捉 Session 狀態變化
+3. 無法獲得完整的 `messages[]` 陣列和 `durationMs`
+
+### 下一步
+
+1. 修改 index.ts 以使用真實存在的 Hook
+2. 測試 Plugin 載入是否正常
+3. 驗證消息捕捉功能
