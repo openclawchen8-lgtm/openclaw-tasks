@@ -91,7 +91,7 @@ echo "0 * * * * cd /path/to/ideas2tasks && python3 lifecycle.py" | crontab -
 [ ] 待做的項目 task.3
 [x] 已完成 task.4
 ## Todo
-- [ ] another pending task.5
+- [☐] another pending task.5
 ```
 
 ## 📁 專案結構

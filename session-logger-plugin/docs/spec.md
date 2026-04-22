@@ -781,14 +781,14 @@ logger.error(`${TAG} [error] type=${type}, message=${err.message}`);
 
 ## 14. 驗收標準
 
-- [ ] Plugin 可成功載入
-- [ ] agent_end Hook 正確觸發
-- [ ] Session 日誌正確寫入 JSONL
-- [ ] Thinking/ToolCalls 正確捕獲
-- [ ] 檔案滾動正常運作
-- [ ] 清理器正確刪除過期檔案
-- [ ] 排除 Agent 正確跳過
-- [ ] 錯誤不阻塞 Agent 主流程
+- [☐] Plugin 可成功載入
+- [☐] agent_end Hook 正確觸發
+- [☐] Session 日誌正確寫入 JSONL
+- [☐] Thinking/ToolCalls 正確捕獲
+- [☐] 檔案滾動正常運作
+- [☐] 清理器正確刪除過期檔案
+- [☐] 排除 Agent 正確跳過
+- [☐] 錯誤不阻塞 Agent 主流程
 
 ---
 

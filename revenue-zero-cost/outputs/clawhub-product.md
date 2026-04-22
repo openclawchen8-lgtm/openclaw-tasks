@@ -195,8 +195,8 @@ AI 自動化監控系統是一套基於 OpenClaw Agent Framework 打造的智能
 
 💾 備份完成
 
-✅ GitHub: 已同步至 openclawchen8-lgtm/gold-monitor
-✅ 微雲: 已上傳數據庫備份
+- [✅] GitHub: 已同步至 openclawchen8-lgtm/gold-monitor
+- [✅] 微雲: 已上傳數據庫備份
 
 📦 備份內容
 - 價格數據：1,247 筆
