@@ -1,15 +1,12 @@
-# 📅 Daily Dashboard - 2026-04-21
+# 📅 Daily Dashboard - 2026-04-22
 
-> 最後更新: 2026-04-21 15:44 · 自動生成
+> 最後更新: 2026-04-22 13:06 · 自動生成
 
 ---
 
 ## 🆕 今日新增任務
 
-| 專案 | 任務 | 標題 |
-| -- | -- | -- |
-| lifecycle-sync-fix | T001 | 修正 lifecycle.py 子任務統計邏輯 |
-| lifecycle-sync-fix | T002 | sync_issues_cron.py 反向同步機制 |
+_無_
 
 ---
 
@@ -41,10 +38,10 @@ _無_
 | gold-analysis-advanced | T002 | ML 模型整合與優化 | medium |
 | gold-analysis-advanced | T003 | 實盤交易接口設計 | medium |
 | gold-analysis-advanced | T004 | 實盤交易對接 | medium |
+| clawhub-oauth-investigation | T001 | T001 |  |
+| clawhub-oauth-investigation | T002 | T002 |  |
 | github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
-| lifecycle-sync-fix | T001 | 修正 lifecycle.py 子任務統計邏輯 |  |
-| lifecycle-sync-fix | T002 | sync_issues_cron.py 反向同步機制 |  |
 | session-logger-plugin | T005 | 安裝與測試驗證 |  |
 
 ---
