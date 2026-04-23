@@ -1,5 +1,8 @@
 # sinotrade-scraper - 永豐投顧台股報告自動抓取系統
 
+> **版本**: v1.1.0（2026-04-23 重構）
+> **變更**: Python 环境规范重构，配置外部化，建立正式包结构
+
 ## 專案目標
 自動化抓取永豐投顧（https://scm.sinotrade.com.tw/）的台股報告，每日推送新增報告至 Telegram。
 
@@ -16,13 +19,10 @@
 | T001 | 環境建置 - 安裝 Playwright | ✅ done | 碼農1號 |
 | T002 | 核心功能開發 - 報告列表抓取與解析 | ✅ done | 碼農1號 |
 | T003 | 增量比對邏輯 | ✅ done | 碼農1號 |
-
-
 | T004 | Telegram 通知整合 | ✅ done | 碼農1號 |
 | T005 | Cron 定時執行 | ✅ done | 寶寶 |
 | T006 | 驗證與測試 | ✅ done | 樂樂 |
-| T007 | 抓取報告公開預覽內容（第一段摘要） | ⏳ pending | 碼農1號 |
-| T008 | 完整報告內容讀取（需登入，等待帳號申請） | ⏳ pending | N/A |
+| T009 | Python 環境規範重構 | ✅ done | 碼農 1 號 |
 
 ## 腳本位置
 - 主腳本：`/Users/claw/scripts/sinotrade_scraper.py`

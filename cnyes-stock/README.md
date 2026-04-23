@@ -4,7 +4,8 @@
 自動化抓取鉅亨網（https://news.cnyes.com/news/cat/tw_stock）的台股新聞，每日推送當日新增新聞至 Telegram。
 
 ## 技術架構
-- **抓取引擎**: Playwright（Python）+ 系統 Chrome（`/Applications/Google Chrome.app`）
+- **抓取引擎**: Playwright（venv）+ 系統 Chrome（`/Applications/Google Chrome.app`）
+- **虛擬環境**: `/Users/claw/Projects/cnyes-stock/.venv/`
 - **通知通道**: Telegram Bot API
 - **執行方式**: Cron Job（每交易日 08:30，Asia/Taipei）
 - **關鍵技術**: URL `?date=YYYY-MM-DD` 過濾日期，DOM 解析過濾「台股」分類
@@ -20,6 +21,7 @@
 | T005 | Cron 定時執行 | ✅ done | 寶寶 |
 | T006 | 驗證與測試 | ✅ done | 樂樂 |
 | T007 | 新增 Trending 頁面台股區塊抓取 | ✅ done | 寶寶 |
+| T008 | 重構為虛擬環境（venv）規範 | ✅ done | 寶寶 |
 
 ## 網站結構研究（2026-04-22）
 
@@ -54,16 +56,20 @@ https://news.cnyes.com/news/cat/tw_stock?date=YYYY-MM-DD
 - 無登入牆、無付費牆
 
 ## 腳本位置
-- 主腳本：`/Users/claw/scripts/cnyes_stock_scraper.py`
+- **venv**：`/Users/claw/Projects/cnyes-stock/.venv/`
+- 主腳本：`/Users/claw/scripts/cnyes_stock_scraper.py`（shebang 指向 venv）
 - 歷史記錄：`~/.qclaw/cnyes_stock_history.json`
 
 ## 使用方式
 ```bash
-# 手動執行（測試）- 抓取分類頁面
-python3 /Users/claw/scripts/cnyes_stock_scraper.py
+# 使用 venv python（推薦）
+/Users/claw/Projects/cnyes-stock/.venv/bin/python3 /Users/claw/scripts/cnyes_stock_scraper.py
+
+# 抓取並存檔
+/Users/claw/Projects/cnyes-stock/.venv/bin/python3 /Users/claw/scripts/cnyes_stock_scraper.py
 
 # 發送 Telegram 通知
-python3 /Users/claw/scripts/cnyes_stock_scraper.py --telegram
+/Users/claw/Projects/cnyes-stock/.venv/bin/python3 /Users/claw/scripts/cnyes_stock_scraper.py --telegram
 
 # 指定日期
 python3 /Users/claw/scripts/cnyes_stock_scraper.py --date 2026-04-22 --telegram
@@ -73,7 +79,15 @@ python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending
 
 # Trending + Telegram 通知
 python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending --telegram
+
+# 使用系統 Chrome（預設使用 Playwright 內建 Chromium）
+python3 /Users/claw/scripts/cnyes_stock_scraper.py --system-chrome
 ```
+
+## 瀏覽器配置
+- **預設**：Playwright 內建 Chromium（headless，無需額外安裝）
+- **系統 Chrome**：`--system-chrome` 參數切換
+- **系統 Chrome 路徑**：`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
 
 ## 實測結果（2026-04-22）
 - ✅ 日期過濾 `?date=2026-04-22` 正常
