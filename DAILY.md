@@ -1,6 +1,6 @@
-# 📅 Daily Dashboard - 2026-04-22
+# 📅 Daily Dashboard - 2026-04-23
 
-> 最後更新: 2026-04-22 19:15 · 自動生成
+> 最後更新: 2026-04-23 20:19 · 自動生成
 
 ---
 
@@ -8,17 +8,14 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| kgi-monitor | T001 | 環境建置 - 安裝 yt-dlp |
-| kgi-monitor | T002 | 核心功能開發 - 抓取與關鍵詞過濾 |
-| kgi-monitor | T003 | 時間範圍配置（CLI 參數） |
-| kgi-monitor | T004 | Telegram 通知整合 |
-| kgi-monitor | T005 | Cron 定時執行設定 |
-| kgi-monitor | T006 | 驗證與測試 |
-| sinotrade-scraper | T002 | 核心功能開發 - 報告列表抓取與解析 |
-| sinotrade-scraper | T003 | 增量比對邏輯 |
-| sinotrade-scraper | T004 | Telegram 通知整合 |
-| sinotrade-scraper | T005 | Cron 定時執行 |
-| sinotrade-scraper | T006 | 驗證與測試 |
+| cnyes-stock | T008 | 重構為虛擬環境（venv）規範 |
+| ideas2tasks | T007 | Python 環境規範重構 |
+| ideas2tasks | T008-1 | lifecycle.py + executor.py 迁移重构 |
+| ideas2tasks | T008-2 | task_status + sync_status + task_completion_hook 迁移 |
+| ideas2tasks | T008-3 | task_audit + read_task_status 迁移 |
+| ideas2tasks | T008 | scripts/ 模組完整遷移重構 |
+| md-viewer-app | T003-實作-Markdown-解析與-WebView-渲染 | 實作 Markdown 解析與 WebView 渲染 |
+| sinotrade-scraper | T009 | Python 環境規範重構 |
 
 ---
 
@@ -26,7 +23,12 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| gold-analysis-advanced | T003 | 實盤交易接口設計 |
+| ideas2tasks | T007 | Python 環境規範重構 |
+| ideas2tasks | T008-1 | lifecycle.py + executor.py 迁移重构 |
+| ideas2tasks | T008-2 | task_status + sync_status + task_completion_hook 迁移 |
+| ideas2tasks | T008-3 | task_audit + read_task_status 迁移 |
+| ideas2tasks | T008 | scripts/ 模組完整遷移重構 |
+| sinotrade-scraper | T009 | Python 環境規範重構 |
 
 ---
 
@@ -56,6 +58,12 @@ _無_
 | clawhub-oauth-investigation | T002 | T002 |  |
 | github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
 | github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
+| md-viewer-app | T001-評估-Fyne-環境 | T001-評估-Fyne-環境 |  |
+| md-viewer-app | T002-建立-Go-骨架與-Window | T002-建立-Go-骨架與-Window |  |
+| md-viewer-app | T003-實作-Markdown-解析與-WebView-渲染 | 實作 Markdown 解析與 WebView 渲染 |  |
+| md-viewer-app | T004-實作-側邊欄-檔案列表 | T004-實作-側邊欄-檔案列表 |  |
+| md-viewer-app | T005-實作-深色模式支援 | T005-實作-深色模式支援 |  |
+| md-viewer-app | T006-Build-與-測試-macOS-app | T006-Build-與-測試-macOS-app |  |
 | session-logger-plugin | T005 | 安裝與測試驗證 |  |
 | sinotrade-scraper | T001 | T001 |  |
 | sinotrade-scraper | T007 | 抓取報告公開預覽內容（第一段摘要） |  |
