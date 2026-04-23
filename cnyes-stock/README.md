@@ -19,6 +19,7 @@
 | T004 | Telegram 通知整合 | ✅ done | 寶寶 |
 | T005 | Cron 定時執行 | ✅ done | 寶寶 |
 | T006 | 驗證與測試 | ✅ done | 樂樂 |
+| T007 | 新增 Trending 頁面台股區塊抓取 | ✅ done | 寶寶 |
 
 ## 網站結構研究（2026-04-22）
 
@@ -58,7 +59,7 @@ https://news.cnyes.com/news/cat/tw_stock?date=YYYY-MM-DD
 
 ## 使用方式
 ```bash
-# 手動執行（測試）
+# 手動執行（測試）- 抓取分類頁面
 python3 /Users/claw/scripts/cnyes_stock_scraper.py
 
 # 發送 Telegram 通知
@@ -66,6 +67,12 @@ python3 /Users/claw/scripts/cnyes_stock_scraper.py --telegram
 
 # 指定日期
 python3 /Users/claw/scripts/cnyes_stock_scraper.py --date 2026-04-22 --telegram
+
+# 抓取 Trending 頁面台股區塊（10筆頭條）
+python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending
+
+# Trending + Telegram 通知
+python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending --telegram
 ```
 
 ## 實測結果（2026-04-22）
@@ -78,6 +85,28 @@ python3 /Users/claw/scripts/cnyes_stock_scraper.py --date 2026-04-22 --telegram
 - 若網站改版、DOM 結構變化，需更新解析邏輯
 - 新聞連結格式：`/news/id/{id}`，需拼接完整 URL
 - 滾動次數可根據文章總數動態調整
+
+## Trending 台股區塊抓取（T007）
+
+### 功能說明
+從 trending 頁面的「台股」區塊抓取 10 筆頭條新聞，與分類頁面抓取互補。
+
+### 使用方式
+```bash
+python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending
+python3 /Users/claw/scripts/cnyes_stock_scraper.py --trending --telegram
+```
+
+### 實作邏輯
+- 開啟 `https://news.cnyes.com/trending?exp=a`
+- 定位「台股」區塊（第 2 個編號區塊）
+- 抓取 10 筆新聞（rank 1-10）
+- 輸出格式包含 rank、title、url
+
+### 實測結果（2026-04-23）
+- ✅ 正確抓到「台股」區塊（非「總覽」區塊）
+- ✅ 10 筆頭條新聞完整抓取
+- ✅ Telegram 通知格式正確
 
 ## 建立日期
 2026-04-22
