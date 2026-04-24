@@ -60,18 +60,33 @@
 
 ## 📁 專案結構
 
+### 原始碼（已移至 ~/Projects/）
+
+```
+~/Projects/
+├── md-viewer-webview/     ← webview 版本（5.1MB）⭐ 推薦
+├── md-viewer-fyne/        ← Fyne 版本（33MB）
+└── COMPARISON.md          ← 詳細對比報告
+```
+
+### 任務追蹤（本目錄）
+
 ```
 md-viewer-app/
 ├── README.md          ← 你現在看的
-├── SPEC.md            ← 詳細需求規格（待建立）
+├── SPEC.md            ← 詳細需求規格
 ├── AGENTS.md          ← 團隊協作規範
 └── tasks/             ← 任務追蹤
+    ├── README.md                           ← 總覽
     ├── T001-評估-Fyne-環境.md
     ├── T002-建立-Go-骨架與-Window.md
     ├── T003-實作-Markdown-解析與-WebView-渲染.md
     ├── T004-實作-側邊欄-檔案列表.md
     ├── T005-實作-深色模式支援.md
-    └── T006-Build-與-測試-macOS-app.md
+    ├── T006-Build-與-測試-macOS-app.md
+    ├── T007-自動化測試快捷鍵與縮放.md
+    ├── T008-專案分裂與對比評估.md      ← 新增
+    └── T009-Icon-設定.md                  ← 新增
 ```
 
 ---
@@ -84,4 +99,24 @@ md-viewer-app/
 
 ---
 
-*建立時間：2026-04-23 by 寶寶*
+## ✅ 當前狀態（2026-04-24）
+
+### 已完成
+| 任務 | 狀態 | 備註 |
+|------|------|------|
+| T001-T007 | ✅ 全部完成 | 兩個版本皆完成 |
+| T008 專案分裂 | ✅ 完成 | 已建立 COMPARISON.md |
+| T009 Icon 設定 | ⏭️ skip | 需手動設定 |
+
+### 待開發（主力：md-viewer-webview）
+| 任務 | 狀態 | 備註 |
+|------|------|------|
+| T010 拖拉開啟 md | 📋 pending | 新增 |
+| T011 Touchpad 靈敏度 | 📋 pending | 新增 |
+
+**推薦使用**：`~/Projects/md-viewer-webview/`（體積小、效能好、原生體驗）
+
+---
+
+*建立時間：2026-04-23 by 寶寶*  
+*最後更新：2026-04-24*

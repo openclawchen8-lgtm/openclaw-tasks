@@ -1,11 +1,24 @@
 ---
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/91
 title: 實作 Markdown 解析與 WebView 渲染
-status: pending
+status: done
 assignee: 碼農2號
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-24
 depends: [T002]
+---
+
+## ⚠️ 更新（2026-04-24）
+
+本任務已**拆分為兩個平行實作**：
+
+| 版本 | 技術棧 | 位置 | 狀態 |
+|------|--------|------|------|
+| webview | webview/webview_go + goldmark | `~/Projects/md-viewer-webview/` | ✅ 全部完成 |
+| fyne | Fyne UI + goldmark | `~/Projects/md-viewer-fyne/` | ✅ 全部完成 |
+
+以下為原始規劃文件，僅供參考。
+
 ---
 
 ## 目標
