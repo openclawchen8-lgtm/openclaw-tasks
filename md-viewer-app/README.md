@@ -107,12 +107,23 @@ md-viewer-app/
 | T001-T007 | ✅ 全部完成 | 兩個版本皆完成 |
 | T008 專案分裂 | ✅ 完成 | 已建立 COMPARISON.md |
 | T009 Icon 設定 | ⏭️ skip | 需手動設定 |
+| T010 拖拉開啟 md | ✅ 完成 | WebView Drag & Drop |
 
 ### 待開發（主力：md-viewer-webview）
-| 任務 | 狀態 | 備註 |
+| 任務 | 狀態 | 說明 |
 |------|------|------|
-| T010 拖拉開啟 md | 📋 pending | 新增 |
-| T011 Touchpad 靈敏度 | 📋 pending | 新增 |
+| T010 拖拉開啟 md | 📋 pending | 從 Finder 拖拉 .md 開啟 |
+| T011 Touchpad 靈敏度 | 📋 pending | Menubar 滑桿設定 |
+| T012 極速渲染引擎 | 📋 pending | 異步渲染，大檔案分段載入 |
+| T013 檔案變動監控 | 📋 pending | 自動同步編輯器存檔 |
+| T014 多主題切換 | 📋 pending | GitHub/夜間/學術/極簡 |
+| T015 Quick Look 插件 | 📋 pending | Finder 空白鍵預覽 |
+| T016 自動大綱 TOC | 📋 pending | 側邊欄目錄，點擊跳轉 |
+| T017 語法高亮 | 📋 pending | highlight.js + 一鍵複製 |
+| T018 置頂小窗模式 | 📋 pending | 視窗置頂 + 透明度 |
+| T019 PDF/HTML 匯出 | 📋 pending | 匯出精美報告 |
+| T020 數學公式 | 📋 pending | MathJax/KaTeX 支援 |
+| T021 Mermaid 圖表 | 📋 pending | 流程圖/甘特圖 |
 
 **推薦使用**：`~/Projects/md-viewer-webview/`（體積小、效能好、原生體驗）
 

@@ -1,6 +1,6 @@
 # 📁 Projects Dashboard
 
-> 最後更新: 2026-04-24 13:18 · 自動生成
+> 最後更新: 2026-04-24 18:03 · 自動生成
 
 ---
 
@@ -9,12 +9,12 @@
 | 指標 | 數量 |
 |------|------|
 | 專案數 | 42 |
-| 任務總數 | 230 |
-| ✅ 已完成 | 208 |
-| ⬜ 待處理 | 17 |
+| 任務總數 | 246 |
+| ✅ 已完成 | 211 |
+| ⬜ 待處理 | 29 |
 | 🔄 進行中 | 2 |
-| ⏭️ 跳過 | 3 |
-| 總完成率 | 90% |
+| ⏭️ 跳過 | 4 |
+| 總完成率 | 85% |
 ## 📋 專案列表
 
 | 狀態 | 專案 | 總數 | ✅ | ⬜ | 🔄 | 進度 | 更新 |
@@ -43,7 +43,7 @@
 | 🔄 | kgi-monitor | 6 | 5 | 0 | 1 | ████████████████░░░░ 83% | — |
 | ✅ | lifecycle-sync-fix | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-21 |
 | ✅ | llm-router | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
-| ⬜ | md-viewer-app | 6 | 0 | 6 | 0 | ░░░░░░░░░░░░░░░░░░░░ 0% | 2026-04-23 |
+| ⬜ | md-viewer-app | 22 | 3 | 18 | 0 | ██░░░░░░░░░░░░░░░░░░ 13% | 2026-04-24 |
 | ✅ | member-backup | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
 | ✅ | member-config-review | 7 | 7 | 0 | 0 | ████████████████████ 100% | — |
 | ✅ | member-tasks | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |
@@ -66,9 +66,9 @@
 
 ## 🔗 快速連結
 
-- [每日儀表板 → DAILY.md](./DAILY.md)
-- [Tasks 根目錄](./)
-- 腳本: `scripts/update_projects.sh` · `scripts/update_daily.sh`
+- [每日儀表板 → DAILY.md](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/DAILY.md)
+- [Tasks 根目錄](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main)
+- 腳本: `scripts/update_projects.py` · `scripts/update_daily.py`
 
 ---
 _自動生成，請勿手動編輯_
