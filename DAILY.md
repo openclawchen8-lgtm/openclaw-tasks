@@ -1,6 +1,6 @@
-# 📅 Daily Dashboard - 2026-04-24
+# 📅 Daily Dashboard - 2026-04-25
 
-> 最後更新: 2026-04-24 18:11 · 自動生成
+> 最後更新: 2026-04-25 16:28 · 自動生成
 
 ---
 
@@ -8,21 +8,13 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| md-viewer-app | T007-自動化測試快捷鍵與縮放 | T007 - 自動化測試快捷鍵與縮放功能 |
-| md-viewer-app | T008-專案分裂與對比評估 | 專案分裂與對比評估 |
-| md-viewer-app | T009-Icon-設定 | Icon 設定 |
-| md-viewer-app | T010-支援拖拉開啟-md-檔案 | 支援拖拉開啟 md 檔案 |
-| md-viewer-app | T011-Menubar-Touchpad-靈敏度設定 | Menubar Touchpad 靈敏度設定 |
-| md-viewer-app | T012-極速渲染引擎 | 極速渲染引擎 |
-| md-viewer-app | T013-檔案變動監控 | 檔案變動監控 |
-| md-viewer-app | T014-多主題切換 | 多主題切換 |
-| md-viewer-app | T015-Quick-Look-插件 | Quick Look 插件 |
-| md-viewer-app | T016-自動大綱-TOC | 自動大綱 (TOC) |
-| md-viewer-app | T017-語法高亮-Code | 語法高亮 (Code) |
-| md-viewer-app | T018-置頂小窗模式 | 置頂小窗模式 |
-| md-viewer-app | T019-PDF-HTML-匯出 | PDF/HTML 匯出 |
-| md-viewer-app | T020-數學公式 | 數學公式 |
-| md-viewer-app | T021-Mermaid-圖表 | Mermaid 圖表 |
+| md-viewer-app | T011-A-Native-NSMenu-骨架 | [T011-A] Native NSMenu 骨架 |
+| md-viewer-app | T011-B-選單結構與shortcut綁定 | [T011-B] 選單結構與 shortcut 綁定 |
+| md-viewer-app | T011-C-Preferences觸發設定面板 | [T011-C] Preferences ⌘, 觸發設定面板 |
+| md-viewer-app | T011-D-Config持久化 | [T011-D] Config 持久化 |
+| md-viewer-app | T011-E-設定結構與預設值 | [T011-E] 設定結構與預設值 |
+| md-viewer-app | T011-F-Settings-Panel-UI | [T011-F] Settings Panel UI |
+| md-viewer-app | T011-G-Zoom-step動態套用 | [T011-G] Zoom step 動態套用 |
 
 ---
 
@@ -30,9 +22,8 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| md-viewer-app | T003-實作-Markdown-解析與-WebView-渲染 | 實作 Markdown 解析與 WebView 渲染 |
-| md-viewer-app | T008-專案分裂與對比評估 | 專案分裂與對比評估 |
 | md-viewer-app | T010-支援拖拉開啟-md-檔案 | 支援拖拉開啟 md 檔案 |
+| md-viewer-app | T011-Menubar-Touchpad-靈敏度設定 | Native NSMenu + 設定面板 + 縮放靈敏度持久化 |
 
 ---
 
@@ -69,7 +60,13 @@ _無_
 | md-viewer-app | T006-Build-與-測試-macOS-app | T006-Build-與-測試-macOS-app |  |
 | md-viewer-app | T007-自動化測試快捷鍵與縮放 | T007 - 自動化測試快捷鍵與縮放功能 |  |
 | md-viewer-app | T010-B1-研究-webview-go | T010-B1-研究-webview-go |  |
-| md-viewer-app | T011-Menubar-Touchpad-靈敏度設定 | Menubar Touchpad 靈敏度設定 |  |
+| md-viewer-app | T011-A-Native-NSMenu-骨架 | [T011-A] Native NSMenu 骨架 |  |
+| md-viewer-app | T011-B-選單結構與shortcut綁定 | [T011-B] 選單結構與 shortcut 綁定 |  |
+| md-viewer-app | T011-C-Preferences觸發設定面板 | [T011-C] Preferences ⌘, 觸發設定面板 |  |
+| md-viewer-app | T011-D-Config持久化 | [T011-D] Config 持久化 |  |
+| md-viewer-app | T011-E-設定結構與預設值 | [T011-E] 設定結構與預設值 |  |
+| md-viewer-app | T011-F-Settings-Panel-UI | [T011-F] Settings Panel UI |  |
+| md-viewer-app | T011-G-Zoom-step動態套用 | [T011-G] Zoom step 動態套用 |  |
 | md-viewer-app | T012-極速渲染引擎 | 極速渲染引擎 |  |
 | md-viewer-app | T013-檔案變動監控 | 檔案變動監控 |  |
 | md-viewer-app | T014-多主題切換 | 多主題切換 |  |
