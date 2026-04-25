@@ -1,96 +1,63 @@
 ---
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
-title: Menubar Touchpad 靈敏度設定
-status: pending
+title: Native NSMenu + 設定面板 + 縮放靈敏度持久化
+status: done
 assignee: 碼農2號
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-25
 depends: [T006]
 ---
 
 ## 目標
 
-在 menubar 中新增 Touchpad 靈敏度設定，使用拖拉滑桿調整。
-
-## 需求
-
-### 功能描述
-1. 在 menubar 選單中新增「設定」子選單
-2. 包含「Touchpad 靈敏度」選項
-3. 點擊後顯示滑桿（slider），可拖拉調整
-4. 靈敏度範圍：1-10（預設 5）
-5. 設定值持久化（儲存到 `~/.md-viewer/config.json`）
-
-### 技術實作方向
-
-**方案 A：macOS Native Menu + NSMenuItem**
-- 使用 `golang.org/x/macosx` 或 CGO 呼叫 Objective-C
-- 建立 `NSMenu` + `NSMenuItem` + `NSSlider`
-- 優點：原生體驗
-- 缺點：需要 CGO，複雜度高
-
-**方案 B：WebView 內嵌設定面板**
-- 在 webview 中建立設定 overlay
-- 使用 HTML `<input type="range">` 滑桿
-- 透過 `webview.Bind` 同步設定值到 Go
-- 優點：實作簡單，跨平台
-- 缺點：非原生 UI
-
-**方案 C：獨立設定視窗**
-- 開啟新的小視窗顯示設定面板
-- 使用 webview 渲染設定 UI
-- 優點：不干擾主視窗
-- 缺點：需要管理多視窗
-
-### 推薦方案
-
-**使用方案 B**（WebView 內嵌設定面板）：
-1. Menubar 新增「設定...」選單項目
-2. 點擊後在 webview 中顯示設定 overlay
-3. 使用 HTML range slider 調整靈敏度
-4. 透過 `webview.Bind` 儲存設定
+在 md-viewer-webview 建立 Native macOS NSMenu，含設定面板與縮放靈敏度持久化。
 
 ## 子任務
 
-### T011-A — Menubar 新增設定選單
-- 在現有選單中加入「設定...」項目
-- 快捷鍵：⌘,
+| Task | 內容 | 狀態 | 負責 |
+|------|------|------|------|
+| **T011-A** | Native NSMenu 骨架（menu.m + menu.go CGO bridge） | pending | 碼農2號 |
+| **T011-B** | 選單結構與 shortcut 綁定（⌘O/⌘Q/⌘+/⌘- 等） | pending | 碼農2號 |
+| **T011-C** | Preferences ⌘, 觸發設定面板 | pending | 碼農2號 |
+| **T011-D** | Config 持久化（`~/.md-viewer/config.json` 載入/儲存） | pending | 碼農2號 |
+| **T011-E** | 設定結構與預設值（zoomSensitivity 1-3、theme） | pending | 碼農2號 |
+| **T011-F** | Settings Panel UI（WebView HTML overlay + range slider） | pending | 碼農2號 |
+| **T011-G** | Zoom step 動態套用（根據 config.zoomSensitivity） | done |
+| **T011-H** | Zoom Level 持久化（重開後還原縮放比例） | done |
+| **T011-I** | 字型 + 字型大小持久化 | done |
+| **T011-J** | 語言切換（繁中/簡中/英/日/韓）+ i18n UI + NSMenu i18n | done |
+| **T011-K** | 視窗全螢幕/正常化（⌘F） | done | 碼農2號 |
 
-### T011-B — 設定面板 UI
-- 建立 settings overlay（半透明遮罩 + 設定面板）
-- 包含：Touchpad 靈敏度滑桿（1-10）
-- 滑桿旁顯示當前數值
+## Menu Item ID 對照
 
-### T011-C — 設定持久化
-- 建立 `~/.md-viewer/config.json`
-- 結構：`{"touchpad_sensitivity": 5, "theme": "auto"}`
-- 啟動時載入，變更時儲存
+| ID | Menu | Item | Shortcut |
+|----|------|------|----------|
+| 1 | App | About | - |
+| 2 | App | Preferences | ⌘, |
+| 3 | File | Open | ⌘O |
+| 4 | File | Reload | ⌘R |
+| 5 | File | Quit | ⌘Q |
+| 6 | View | Zoom In | ⌘+ |
+| 7 | View | Zoom Out | ⌘- |
+| 8 | View | Zoom Reset | ⌘0 |
+| 9 | View | Toggle Sidebar | ⌘B |
+| 10 | Help | About | - |
 
-### T011-D — 靈敏度效果實作
-- 將靈敏度值對應到實際行為（例如縮放速度、滾動速度）
-- 需確認 touchpad 靈敏度對 webview 的影響方式
+## Zoom Sensitivity 等級對照
 
-## 產出
+| 等級 | 名稱 | step |
+|------|------|------|
+| 1 | 低 | 0.05 |
+| 2 | 中（預設） | 0.10 |
+| 3 | 高 | 0.20 |
 
-- `main.go` 更新（新增設定選單、config 載入/儲存）
-- `assets/template.html` 更新（settings overlay）
-- `assets/markdown.css` 更新（設定面板樣式）
-- `~/.md-viewer/config.json`（設定檔）
+## 修改的檔案
 
-## 驗收標準
-
-- [ ] Menubar 有「設定...」選單項目
-- [ ] 點擊後顯示設定面板
-- [ ] 滑桿可拖拉調整靈敏度（1-10）
-- [ ] 設定值會儲存，重開 app 後保留
-- [ ] 快捷鍵 ⌘, 可開啟設定
-
-## 備註
-
-- Touchpad 靈敏度的實際效果需進一步研究
-- 可能需要對應到 webview 的滾動速度或縮放速度
-- 若無法直接控制 touchpad，可改為「滾動速度」或「縮放靈敏度」
+- `menu.m`（新）：Objective-C NSMenu 實作
+- `menu.go`（新）：Go CGO bridge
+- `config.go`（新）：Config 持久化
+- `main.go`（擴充）：Settings panel JS + menu callback 處理
 
 ---
 
-*建立時間：2026-04-24 by 寶寶*
+*最後更新：2026-04-25 by 寶寶*

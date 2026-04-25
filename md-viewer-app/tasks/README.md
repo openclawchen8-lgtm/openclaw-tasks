@@ -44,18 +44,25 @@
 | T007 | 縮放功能（⌘+/⌘-） | ✅ done | 兩版本皆完成 |
 | T008 | 專案分裂與對比評估 | ✅ done | 建立 COMPARISON.md |
 | T009 | Icon 設定完成 | ⏭️ skip | 需手動設定，無法自動化 |
-| **T010** | **支援拖拉開啟 md 檔案** | **📋 pending** | **新增** |
+| T010 | 支援拖拉開啟 md 檔案 | ✅ done | WebView Drag & Drop |
 | **T011** | **Menubar Touchpad 靈敏度設定** | **📋 pending** | **新增** |
-| **T012** | **極速渲染引擎** | **📋 pending** | **新增** |
-| **T013** | **檔案變動監控** | **📋 pending** | **新增** |
-| **T014** | **多主題切換** | **📋 pending** | **新增** |
-| **T015** | **Quick Look 插件** | **📋 pending** | **新增** |
-| **T016** | **自動大綱 (TOC)** | **📋 pending** | **新增** |
-| **T017** | **語法高亮 (Code)** | **📋 pending** | **新增** |
-| **T018** | **置頂小窗模式** | **📋 pending** | **新增** |
-| **T019** | **PDF/HTML 匯出** | **📋 pending** | **新增** |
-| **T020** | **數學公式** | **📋 pending** | **新增** |
-| **T021** | **Mermaid 圖表** | **📋 pending** | **新增** |
+| ├ T011-A | Native NSMenu 骨架 | 📋 pending | 碼農2號 |
+| ├ T011-B | 選單結構與 shortcut 綁定 | 📋 pending | 碼農2號，依賴 A |
+| ├ T011-C | Preferences ⌘, 觸發設定面板 | 📋 pending | 碼農2號，依賴 A |
+| ├ T011-D | Config 持久化 | 📋 pending | 碼農2號，依賴 A |
+| ├ T011-E | 設定結構與預設值 | 📋 pending | 碼農2號，依賴 D |
+| ├ T011-F | Settings Panel UI | 📋 pending | 碼農2號，依賴 C,D |
+| └ T011-G | Zoom step 動態套用 | 📋 pending | 碼農2號，依賴 F |
+| T012 | 極速渲染引擎 | 📋 pending | 新增 |
+| T013 | 檔案變動監控 | 📋 pending | 新增 |
+| T014 | 多主題切換 | 📋 pending | 新增 |
+| T015 | Quick Look 插件 | 📋 pending | 新增 |
+| T016 | 自動大綱 (TOC) | 📋 pending | 新增 |
+| T017 | 語法高亮 (Code) | 📋 pending | 新增 |
+| T018 | 置頂小窗模式 | 📋 pending | 新增 |
+| T019 | PDF/HTML 匯出 | 📋 pending | 新增 |
+| T020 | 數學公式 | 📋 pending | 新增 |
+| T021 | Mermaid 圖表 | 📋 pending | 新增 |
 
 ---
 
@@ -76,4 +83,4 @@
 
 ---
 
-*最後更新：2026-04-24 by 寶寶*
+*最後更新：2026-04-25 by 寶寶*

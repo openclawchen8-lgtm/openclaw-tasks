@@ -86,7 +86,17 @@ md-viewer-app/
     ├── T006-Build-與-測試-macOS-app.md
     ├── T007-自動化測試快捷鍵與縮放.md
     ├── T008-專案分裂與對比評估.md      ← 新增
-    └── T009-Icon-設定.md                  ← 新增
+    ├── T009-Icon-設定.md                  ← 新增
+    ├── T010-支援拖拉開啟-md-檔案.md       ← 新增
+    ├── T011-Menubar-Touchpad-靈敏度設定.md ← 新增
+    │   ├── T011-A-Native-NSMenu-骨架.md
+    │   ├── T011-B-選單結構與shortcut綁定.md
+    │   ├── T011-C-Preferences觸發設定面板.md
+    │   ├── T011-D-Config持久化.md
+    │   ├── T011-E-設定結構與預設值.md
+    │   ├── T011-F-Settings-Panel-UI.md
+    │   └── T011-G-Zoom-step動態套用.md
+    └── ...
 ```
 
 ---
@@ -99,7 +109,7 @@ md-viewer-app/
 
 ---
 
-## ✅ 當前狀態（2026-04-24）
+## ✅ 當前狀態（2026-04-25）
 
 ### 已完成
 | 任務 | 狀態 | 備註 |
@@ -112,8 +122,14 @@ md-viewer-app/
 ### 待開發（主力：md-viewer-webview）
 | 任務 | 狀態 | 說明 |
 |------|------|------|
-| T010 拖拉開啟 md | 📋 pending | 從 Finder 拖拉 .md 開啟 |
-| T011 Touchpad 靈敏度 | 📋 pending | Menubar 滑桿設定 |
+| T011 | 📋 pending | Menubar + Touchpad 靈敏度設定 |
+| ├ T011-A | 📋 pending | Native NSMenu 骨架（碼農2號） |
+| ├ T011-B | 📋 pending | 選單結構與 shortcut 綁定 |
+| ├ T011-C | 📋 pending | Preferences ⌘, 觸發設定面板 |
+| ├ T011-D | 📋 pending | Config 持久化 |
+| ├ T011-E | 📋 pending | 設定結構與預設值 |
+| ├ T011-F | 📋 pending | Settings Panel UI |
+| └ T011-G | 📋 pending | Zoom step 動態套用 |
 | T012 極速渲染引擎 | 📋 pending | 異步渲染，大檔案分段載入 |
 | T013 檔案變動監控 | 📋 pending | 自動同步編輯器存檔 |
 | T014 多主題切換 | 📋 pending | GitHub/夜間/學術/極簡 |
@@ -130,4 +146,4 @@ md-viewer-app/
 ---
 
 *建立時間：2026-04-23 by 寶寶*  
-*最後更新：2026-04-24*
+*最後更新：2026-04-25*
