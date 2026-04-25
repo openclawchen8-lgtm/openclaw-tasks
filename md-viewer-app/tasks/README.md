@@ -45,14 +45,23 @@
 | T008 | 專案分裂與對比評估 | ✅ done | 建立 COMPARISON.md |
 | T009 | Icon 設定完成 | ⏭️ skip | 需手動設定，無法自動化 |
 | T010 | 支援拖拉開啟 md 檔案 | ✅ done | WebView Drag & Drop |
-| **T011** | **Menubar Touchpad 靈敏度設定** | **📋 pending** | **新增** |
+| **T011** | **Menubar 設定面板 縮放持久化** | **📋 進行中** | **新增** |
 | ├ T011-A | Native NSMenu 骨架 | 📋 pending | 碼農2號 |
-| ├ T011-B | 選單結構與 shortcut 綁定 | 📋 pending | 碼農2號，依賴 A |
-| ├ T011-C | Preferences ⌘, 觸發設定面板 | 📋 pending | 碼農2號，依賴 A |
-| ├ T011-D | Config 持久化 | 📋 pending | 碼農2號，依賴 A |
-| ├ T011-E | 設定結構與預設值 | 📋 pending | 碼農2號，依賴 D |
-| ├ T011-F | Settings Panel UI | 📋 pending | 碼農2號，依賴 C,D |
-| └ T011-G | Zoom step 動態套用 | 📋 pending | 碼農2號，依賴 F |
+| ├ T011-B | 選單結構與 shortcut 綁定 | 📋 pending | 依賴 A |
+| ├ T011-C | Preferences ⌘, 觸發設定面板 | 📋 pending | 依賴 A |
+| ├ T011-D | Config 持久化 | 📋 pending | 依賴 A |
+| ├ T011-E | 設定結構與預設值 | 📋 pending | 依賴 D |
+| ├ T011-F | Settings Panel UI | 📋 pending | 依賴 C,D |
+| ├ T011-G | Zoom step 動態套用 | ✅ done | |
+| ├ T011-H | Zoom Level 持久化 | ✅ done | |
+| ├ T011-I | 字型 + 字型大小持久化 | ✅ done | |
+| ├ T011-J | 語言切換 + i18n UI + NSMenu i18n | ✅ done | |
+| ├ T011-K | 視窗全螢幕/正常化 ⌘F | ✅ done | |
+| ├ T011-L | macOS 文件關聯（雙擊 .md 開啟） | 📋 pending | |
+| ├ T011-FIX-01 | zoom 永遠用舊值 | 📋 pending | Bug 修復 |
+| ├ T011-FIX-02 | i18n 語系切換不生效 | 📋 pending | Bug 修復 |
+| ├ T011-FIX-03 | menubar 預設顯示英文 | 📋 pending | Bug 修復 |
+| └ T011-FIX-04 | ⌘F 全螢幕無實現 | 📋 pending | Bug 修復 |
 | T012 | 極速渲染引擎 | 📋 pending | 新增 |
 | T013 | 檔案變動監控 | 📋 pending | 新增 |
 | T014 | 多主題切換 | 📋 pending | 新增 |

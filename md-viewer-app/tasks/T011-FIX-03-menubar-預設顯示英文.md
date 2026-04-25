@@ -1,4 +1,5 @@
 ---
+github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/100
 title: "[T011-FIX-03] 修復 menubar 預設語系顯示英文"
 type: subtask
 status: pending
