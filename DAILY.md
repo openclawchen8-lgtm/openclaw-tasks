@@ -1,18 +1,22 @@
 # 📅 Daily Dashboard - 2026-04-26
 
-> 最後更新: 2026-04-26 15:09 · 自動生成
+> 最後更新: 2026-04-26 18:18 · 自動生成
 
 ---
 
 ## 🆕 今日新增任務
 
-_無_
+| 專案 | 任務 | 標題 |
+| -- | -- | -- |
+| md-viewer-app | T011-FIX-05-zoom-三個附帶bug | [T011-FIX-05] 修復 zoom 修復後三個附帶問題 |
 
 ---
 
 ## ✅ 今日完成任務
 
-_無_
+| 專案 | 任務 | 標題 |
+| -- | -- | -- |
+| md-viewer-app | T011-FIX-05-zoom-三個附帶bug | [T011-FIX-05] 修復 zoom 修復後三個附帶問題 |
 
 ---
 
@@ -55,7 +59,6 @@ _無_
 | md-viewer-app | T011-D-Config持久化 | [T011-D] Config 持久化 |  |
 | md-viewer-app | T011-E-設定結構與預設值 | [T011-E] 設定結構與預設值 |  |
 | md-viewer-app | T011-F-Settings-Panel-UI | [T011-F] Settings Panel UI |  |
-| md-viewer-app | T011-FIX-01-zoom-永遠用舊值 | [T011-FIX-01] 修復 zoomIn/zoomOut 永遠用舊值 |  |
 | md-viewer-app | T011-FIX-02-i18n-語系切換不生效 | [T011-FIX-02] 修復 i18n 語系切換不生效 |  |
 | md-viewer-app | T011-FIX-03-menubar-預設顯示英文 | [T011-FIX-03] 修復 menubar 預設語系顯示英文 |  |
 | md-viewer-app | T011-FIX-04-⌘F-全螢幕無實現 | [T011-FIX-04] 修復 Toggle Full Screen ⌘F 無實現 |  |
