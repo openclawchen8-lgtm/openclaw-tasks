@@ -58,10 +58,10 @@
 | ├ T011-J | 語言切換 + i18n UI + NSMenu i18n | ✅ done | |
 | ├ T011-K | 視窗全螢幕/正常化 ⌘F | ✅ done | |
 | ├ T011-L | macOS 文件關聯（雙擊 .md 開啟） | 📋 pending | |
-| ├ T011-FIX-01 | zoom 永遠用舊值 | 📋 pending | Bug 修復 |
-| ├ T011-FIX-02 | i18n 語系切換不生效 | 📋 pending | Bug 修復 |
-| ├ T011-FIX-03 | menubar 預設顯示英文 | 📋 pending | Bug 修復 |
-| └ T011-FIX-04 | ⌘F 全螢幕無實現 | 📋 pending | Bug 修復 |
+| ├ T011-FIX-01 | zoom 永遠用舊值 | 📋 in-progress | 碼農1號 |
+| ├ T011-FIX-02 | i18n 語系切換不生效 | 📋 pending | 最複雜，FIX-01/03 完成後做 |
+| ├ T011-FIX-03 | menubar 預設顯示英文 | 📋 pending | 依賴 FIX-01，FIX-01 完成後由碼農2號接 |
+| └ T011-FIX-04 | ⌘F 全螢幕無實現 | ✅ done | Bug 修復 |
 | T012 | 極速渲染引擎 | 📋 pending | 新增 |
 | T013 | 檔案變動監控 | 📋 pending | 新增 |
 | T014 | 多主題切換 | 📋 pending | 新增 |
