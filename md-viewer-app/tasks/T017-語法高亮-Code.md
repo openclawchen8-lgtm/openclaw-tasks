@@ -1,10 +1,10 @@
 ---
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/101
 title: 語法高亮 (Code)
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-28
 depends: [T006]
 ---
 
@@ -108,8 +108,8 @@ document.querySelectorAll('pre code').forEach((block) => {
 
 - [x] 程式碼區塊有語法高亮
 - [x] 支援 Swift, Python, JSON, JavaScript, Go, Rust
-- [] 右上角有複製按鈕
-- [] 點擊複製按鈕可複製程式碼
+- [x] 右上角有複製按鈕
+- [x] 點擊複製按鈕可複製程式碼
 - [x] 深色/淺色主題高亮樣式正確
 
 ---

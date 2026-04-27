@@ -1,6 +1,6 @@
-# 📅 Daily Dashboard - 2026-04-27
+# 📅 Daily Dashboard - 2026-04-28
 
-> 最後更新: 2026-04-27 14:16 · 自動生成
+> 最後更新: 2026-04-28 00:52 · 自動生成
 
 ---
 
@@ -14,17 +14,9 @@ _無_
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| md-viewer-app | T011-A-Native-NSMenu-骨架 | [T011-A] Native NSMenu 骨架 |
-| md-viewer-app | T011-C-Preferences觸發設定面板 | [T011-C] Preferences ⌘, 觸發設定面板 |
-| md-viewer-app | T011-D-Config持久化 | [T011-D] Config 持久化 |
-| md-viewer-app | T011-E-設定結構與預設值 | [T011-E] 設定結構與預設值 |
-| md-viewer-app | T011-FIX-01-zoom-永遠用舊值 | [T011-FIX-01] 修復 zoomIn/zoomOut 永遠用舊值 |
-| md-viewer-app | T011-FIX-02-i18n-語系切換不生效 | [T011-FIX-02] 修復 i18n 語系切換不生效 |
-| md-viewer-app | T011-FIX-03-menubar-預設顯示英文 | [T011-FIX-03] 修復 menubar 預設語系顯示英文 |
-| md-viewer-app | T011-FIX-04-⌘F-全螢幕無實現 | [T011-FIX-04] 修復 Toggle Full Screen ⌘F 無實現 |
-| md-viewer-app | T011-G-Zoom-step動態套用 | [T011-G] Zoom step 動態套用 |
-| md-viewer-app | T012-極速渲染引擎 | 極速渲染引擎 |
-| md-viewer-app | T014-多主題切換 | 多主題切換 |
+| md-viewer-app | T013-檔案變動監控 | 檔案變動監控 |
+| md-viewer-app | T017-語法高亮-Code | 語法高亮 (Code) |
+| md-viewer-app | T019-PDF-HTML-匯出 | PDF/HTML 匯出 |
 
 ---
 
@@ -62,12 +54,9 @@ _無_
 | md-viewer-app | T007-自動化測試快捷鍵與縮放 | T007 - 自動化測試快捷鍵與縮放功能 |  |
 | md-viewer-app | T010-B1-研究-webview-go | T010-B1-研究-webview-go |  |
 | md-viewer-app | T011-L-macOS-文件關聯 | [T011-L] macOS 文件關聯（雙擊 .md 用 md-viewer 開啟） |  |
-| md-viewer-app | T013-檔案變動監控 | 檔案變動監控 |  |
 | md-viewer-app | T015-Quick-Look-插件 | Quick Look 插件 |  |
 | md-viewer-app | T016-自動大綱-TOC | 自動大綱 (TOC) |  |
-| md-viewer-app | T017-語法高亮-Code | 語法高亮 (Code) |  |
 | md-viewer-app | T018-置頂小窗模式 | 置頂小窗模式 |  |
-| md-viewer-app | T019-PDF-HTML-匯出 | PDF/HTML 匯出 |  |
 | md-viewer-app | T020-數學公式 | 數學公式 |  |
 | md-viewer-app | T021-Mermaid-圖表 | Mermaid 圖表 |  |
 | session-logger-plugin | T005 | 安裝與測試驗證 |  |

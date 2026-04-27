@@ -43,33 +43,33 @@
 | T006 | Build 與測試 macOS app | ✅ done | 兩版本皆完成 |
 | T007 | 縮放功能（⌘+/⌘-） | ✅ done | 兩版本皆完成 |
 | T008 | 專案分裂與對比評估 | ✅ done | 建立 COMPARISON.md |
-| T009 | Icon 設定完成 | ⏭️ skip | 需手動設定，無法自動化 |
+| T009 | Icon 設定完成 |  ✅ done | 需手動設定，無法自動化 |
 | T010 | 支援拖拉開啟 md 檔案 | ✅ done | WebView Drag & Drop |
-| **T011** | **Menubar 設定面板 縮放持久化** | **📋 進行中** | **新增** |
-| ├ T011-A | Native NSMenu 骨架 | 📋 pending | 碼農2號 |
-| ├ T011-B | 選單結構與 shortcut 綁定 | 📋 pending | 依賴 A |
-| ├ T011-C | Preferences ⌘, 觸發設定面板 | 📋 pending | 依賴 A |
-| ├ T011-D | Config 持久化 | 📋 pending | 依賴 A |
-| ├ T011-E | 設定結構與預設值 | 📋 pending | 依賴 D |
-| ├ T011-F | Settings Panel UI | 📋 pending | 依賴 C,D |
-| ├ T011-G | Zoom step 動態套用 | ✅ done | |
-| ├ T011-H | Zoom Level 持久化 | ✅ done | |
-| ├ T011-I | 字型 + 字型大小持久化 | ✅ done | |
-| ├ T011-J | 語言切換 + i18n UI + NSMenu i18n | ✅ done | |
-| ├ T011-K | 視窗全螢幕/正常化 ⌘F | ✅ done | |
+| **T011** | **Menubar 設定面板 縮放持久化** |  ✅ done | gemini-3-flash-preview |
+| ├ T011-A | Native NSMenu 骨架 |  ✅ done | 碼農2號 |
+| ├ T011-B | 選單結構與 shortcut 綁定 |  ✅ done | 依賴 A |
+| ├ T011-C | Preferences ⌘, 觸發設定面板 |  ✅ done | 依賴 A |
+| ├ T011-D | Config 持久化 |  ✅ done | 依賴 A |
+| ├ T011-E | 設定結構與預設值 |  ✅ done | 依賴 D |
+| ├ T011-F | Settings Panel UI |  ✅ done | 依賴 C,D |
+| ├ T011-G | Zoom step 動態套用 | ✅ done | gemini-3-flash-preview |
+| ├ T011-H | Zoom Level 持久化 | ✅ done | gemini-3-flash-preview |
+| ├ T011-I | 字型 + 字型大小持久化 | ✅ done | gemini-3-flash-preview |
+| ├ T011-J | 語言切換 + i18n UI + NSMenu i18n | ✅ done | gemini-3-flash-preview |
+| ├ T011-K | 視窗全螢幕/正常化 ⌘F | ✅ done | gemini-3-flash-preview |
 | ├ T011-L | macOS 文件關聯（雙擊 .md 開啟） | 📋 pending | |
-| ├ T011-FIX-01 | zoom 永遠用舊值 | 📋 in-progress | 碼農1號 |
-| ├ T011-FIX-02 | i18n 語系切換不生效 | 📋 pending | 最複雜，FIX-01/03 完成後做 |
-| ├ T011-FIX-03 | menubar 預設顯示英文 | 📋 pending | 依賴 FIX-01，FIX-01 完成後由碼農2號接 |
-| └ T011-FIX-04 | ⌘F 全螢幕無實現 | ✅ done | Bug 修復 |
-| T012 | 極速渲染引擎 | 📋 pending | 新增 |
-| T013 | 檔案變動監控 | 📋 pending | 新增 |
-| T014 | 多主題切換 | 📋 pending | 新增 |
+| ├ T011-FIX-01 | zoom 永遠用舊值 |  ✅ done | gemini-3-flash-preview |
+| ├ T011-FIX-02 | i18n 語系切換不生效 |  ✅ done | gemini-3-flash-preview |
+| ├ T011-FIX-03 | menubar 預設顯示英文 |  ✅ done | gemini-3-flash-preview |
+| └ T011-FIX-04 | ⌘F 全螢幕無實現 | ✅ done | gemini-3-flash-preview |
+| T012 | 極速渲染引擎 |  ✅ done | gemini-3-flash-preview |
+| T013 | 檔案變動監控 |  ✅ done | gemini-3-flash-preview |
+| T014 | 多主題切換 |  ✅ done | gemini-3-flash-preview |
 | T015 | Quick Look 插件 | 📋 pending | 新增 |
 | T016 | 自動大綱 (TOC) | 📋 pending | 新增 |
 | T017 | 語法高亮 (Code) | 📋 pending | 新增 |
 | T018 | 置頂小窗模式 | 📋 pending | 新增 |
-| T019 | PDF/HTML 匯出 | 📋 pending | 新增 |
+| T019 | PDF/HTML 匯出 |  ✅ done | gemini-3-flash-preview |
 | T020 | 數學公式 | 📋 pending | 新增 |
 | T021 | Mermaid 圖表 | 📋 pending | 新增 |
 

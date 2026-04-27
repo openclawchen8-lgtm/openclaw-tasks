@@ -1,10 +1,10 @@
 ---
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/103
 title: PDF/HTML 匯出
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-28
 depends: [T006]
 ---
 
@@ -108,12 +108,12 @@ func exportHTML(markdown string, css string) string {
 
 ## 驗收標準
 
-- [ ] 可匯出為 HTML
-- [ ] 可匯出為 PDF
-- [ ] HTML 內嵌完整 CSS
-- [ ] PDF 保持原樣式
-- [ ] 檔名建議正確
-- [ ] 匯出選單正常運作
+- [x] 可匯出為 HTML
+- [x] 可匯出為 PDF
+- [x] HTML 內嵌完整 CSS
+- [x] PDF 保持原樣式
+- [x] 檔名建議正確
+- [x] 匯出選單正常運作
 
 ---
 
