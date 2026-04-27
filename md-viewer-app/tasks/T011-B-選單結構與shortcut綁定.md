@@ -2,8 +2,8 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-B] 選單結構與 shortcut 綁定"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
 updated: 2026-04-25
@@ -44,9 +44,9 @@ const (
 ```
 
 ## 驗收標準
-- [ ] 所有 menu item 出現且可見
-- [ ] keyboard shortcut 正常觸發（如 ⌘O 開檔、⌘Q 離開）
-- [ ] Quit 正常關閉 app
+- [x] 所有 menu item 出現且可見
+- [x] keyboard shortcut 正常觸發（如 ⌘O 開檔、⌘Q 離開）
+- [x] Quit 正常關閉 app
 
 ---
 

@@ -2,11 +2,11 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-G] Zoom step 動態套用"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 depends: [T011-F]
 ---
 
@@ -39,9 +39,9 @@ window.applyZoomSensitivity(window.config && window.config.zoomSensitivity || 2)
 | 3 | 高 | 0.20 |
 
 ## 驗收標準
-- [ ] 縮放靈敏度設定後立即生效
-- [ ] ⌘+ / ⌘- 行為符合設定等級
-- [ ] 重開 app 後等級保留
+- [x] 縮放靈敏度設定後立即生效
+- [x] ⌘+ / ⌘- 行為符合設定等級
+- [x] 重開 app 後等級保留
 
 ---
 

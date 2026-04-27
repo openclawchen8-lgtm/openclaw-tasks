@@ -2,9 +2,9 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/98
 title: "[T011-FIX-05] 修復 zoom 修復後三個附帶問題"
 type: subtask
-status: done
 done_time: 2026-04-26
-assignee: 碼農1號
+assignee: gemini-3-flash-preview
+status: done
 parent: T011
 created: 2026-04-26
 updated: 2026-04-26
@@ -51,10 +51,10 @@ updated: 2026-04-26
 
 ## 驗收標準
 
-- [ ] 底部 bar 正確顯示當前 zoom %（如 `120%`），zoom 操作後保持顯示
-- [ ] ⌘+S 開啟設定面板，再按 ⌘+S / Esc / 點 × 可關閉
-- [ ] 底部 bar 顯示 `⌘S` 而非 `⌘S Settings`
-- [ ] `go build` 無錯誤
+- [x] 底部 bar 正確顯示當前 zoom %（如 `120%`），zoom 操作後保持顯示
+- [x] ⌘+S 開啟設定面板，再按 ⌘+S / Esc / 點 × 可關閉
+- [x] 底部 bar 顯示 `⌘S` 而非 `⌘S Settings`
+- [x] `go build` 無錯誤
 
 ## 實作摘要
 

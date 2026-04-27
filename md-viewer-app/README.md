@@ -118,34 +118,34 @@ md-viewer-app/
 | T008 專案分裂 | ✅ 完成 | 已建立 COMPARISON.md |
 | T009 Icon 設定 | ⏭️ skip | 需手動設定 |
 | T010 拖拉開啟 md | ✅ 完成 | WebView Drag & Drop |
+| T012 極速渲染引擎 | ✅ done | 異步渲染，大檔案分段載入 |
+| T014 多主題切換 | ✅ done | GitHub/夜間/學術/極簡 |
+| T017 語法高亮 | ✅ done | highlight.js + 一鍵複製 |
 
 ### 待開發（主力：md-viewer-webview）
 | 任務 | 狀態 | 說明 |
 |------|------|------|
 | T011 | 📋 進行中 | Menubar + 設定面板 + 縮放靈敏度持久化 |
-| ├ T011-A | 📋 pending | Native NSMenu 骨架 |
-| ├ T011-B | 📋 pending | 選單結構與 shortcut 綁定 |
-| ├ T011-C | 📋 pending | Preferences ⌘, 觸發設定面板 |
-| ├ T011-D | 📋 pending | Config 持久化 |
-| ├ T011-E | 📋 pending | 設定結構與預設值 |
-| ├ T011-F | 📋 pending | Settings Panel UI |
+| ├ T011-A | ✅ done | Native NSMenu 骨架 |
+| ├ T011-B | ✅ done | 選單結構與 shortcut 綁定 |
+| ├ T011-C | ✅ done | Preferences ⌘, 觸發設定面板 |
+| ├ T011-D | ✅ done | Config 持久化 |
+| ├ T011-E | ✅ done | 設定結構與預設值 |
+| ├ T011-F | ✅ done | Settings Panel UI |
 | ├ T011-G | ✅ done | Zoom step 動態套用 |
 | ├ T011-H | ✅ done | Zoom Level 持久化 |
 | ├ T011-I | ✅ done | 字型 + 字型大小持久化 |
 | ├ T011-J | ✅ done | 語言切換 + i18n UI + NSMenu i18n |
 | ├ T011-K | ✅ done | 視窗全螢幕/正常化 ⌘F |
 | ├ T011-L | 📋 pending | macOS 文件關聯（雙擊 .md 開啟） |
-| ├ T011-FIX-01 | 📋 pending | zoom 永遠用舊值 |
-| ├ T011-FIX-02 | 📋 pending | i18n 語系切換不生效 |
-| ├ T011-FIX-03 | 📋 pending | menubar 預設顯示英文 |
-| └ T011-FIX-04 | 📋 pending | ⌘F 全螢幕無實現 |
+| ├ T011-FIX-01 | ✅ done | zoom 永遠用舊值 |
+| ├ T011-FIX-02 | ✅ done | i18n 語系切換不生效 |
+| ├ T011-FIX-03 | ✅ done | menubar 預設顯示英文 |
+| └ T011-FIX-04 | ✅ done | ⌘F 全螢幕無實現 |
 | **T011-L** | **macOS 文件關聯** | **📋 pending** | **新增** |
-| T012 極速渲染引擎 | 📋 pending | 異步渲染，大檔案分段載入 |
 | T013 檔案變動監控 | 📋 pending | 自動同步編輯器存檔 |
-| T014 多主題切換 | 📋 pending | GitHub/夜間/學術/極簡 |
 | T015 Quick Look 插件 | 📋 pending | Finder 空白鍵預覽 |
 | T016 自動大綱 TOC | 📋 pending | 側邊欄目錄，點擊跳轉 |
-| T017 語法高亮 | 📋 pending | highlight.js + 一鍵複製 |
 | T018 置頂小窗模式 | 📋 pending | 視窗置頂 + 透明度 |
 | T019 PDF/HTML 匯出 | 📋 pending | 匯出精美報告 |
 | T020 數學公式 | 📋 pending | MathJax/KaTeX 支援 |

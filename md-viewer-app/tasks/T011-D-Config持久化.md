@@ -2,11 +2,11 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-D] Config 持久化"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 depends: [T011-A]
 ---
 
@@ -31,9 +31,9 @@ depends: [T011-A]
 ```
 
 ## 驗收標準
-- [ ] app 啟動時 config 檔案存在（自動建立）
-- [ ] 設定變更時寫回磁碟
-- [ ] 重開 app 後設定保留
+- [x] app 啟動時 config 檔案存在（自動建立）
+- [x] 設定變更時寫回磁碟
+- [x] 重開 app 後設定保留
 
 ---
 

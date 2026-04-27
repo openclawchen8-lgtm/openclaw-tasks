@@ -2,8 +2,8 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-F] Settings Panel UI"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
 updated: 2026-04-25
@@ -30,10 +30,10 @@ depends: [T011-C, T011-D]
 - 響應式寬度（max 400px）
 
 ## 驗收標準
-- [ ] 設定面板有視覺美感（與 app 主題一致）
-- [ ] 滑桿可正常拖動
-- [ ] 關閉按鈕（×）可關閉面板
-- [ ] ESC 鍵可關閉面板
+- [x] 設定面板有視覺美感（與 app 主題一致）
+- [x] 滑桿可正常拖動
+- [x] 關閉按鈕（×）可關閉面板
+- [x] ESC 鍵可關閉面板
 
 ---
 

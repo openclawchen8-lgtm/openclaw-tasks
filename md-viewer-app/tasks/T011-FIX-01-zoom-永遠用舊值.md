@@ -3,11 +3,11 @@ github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/98
 title: "[T011-FIX-01] 修復 zoomIn/zoomOut 永遠用舊值"
 type: subtask
 status: done
-assignee: 碼農2號
-done_time: 2026-04-26
+assignee: gemini-3-flash-preview
+done_time: 2026-04-27
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 ---
 
 ## 目標
@@ -75,10 +75,10 @@ func loadFile(path string) {
 
 ## 驗收標準
 
-- [ ] ⌘+ / ⌘- 正確遞增遞減（讀取 config zoomSensitivity）
-- [ ] 切換檔案後 zoom 保持當前比例
-- [ ] 關閉重開 app 後 zoom 保持上次比例
-- [ ] 設定面板的縮放靈敏度改後立即生效
+- [x] ⌘+ / ⌘- 正確遞增遞減（讀取 config zoomSensitivity）
+- [x] 切換檔案後 zoom 保持當前比例
+- [x] 關閉重開 app 後 zoom 保持上次比例
+- [x] 設定面板的縮放靈敏度改後立即生效
 
 ---
 

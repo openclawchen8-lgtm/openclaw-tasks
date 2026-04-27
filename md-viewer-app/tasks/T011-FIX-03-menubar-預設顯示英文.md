@@ -2,11 +2,11 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/100
 title: "[T011-FIX-03] 修復 menubar 預設語系顯示英文"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 ---
 
 ## 目標
@@ -109,10 +109,10 @@ time.AfterFunc(500*time.Millisecond, func() {
 
 ## 驗收標準
 
-- [ ] app 啟動時 menubar 顯示繁中（或 config 中設定的語言）
-- [ ] top-level menu item 顯示正確語言 title
-- [ ] 語言切換後 menubar 即時更新
-- [ ] `dispatch_once` 問題已修正（menu 可重複重建）
+- [x] app 啟動時 menubar 顯示繁中（或 config 中設定的語言）
+- [x] top-level menu item 顯示正確語言 title
+- [x] 語言切換後 menubar 即時更新
+- [x] `dispatch_once` 問題已修正（menu 可重複重建）
 
 ---
 

@@ -2,11 +2,11 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-A] Native NSMenu 骨架"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 ---
 
 ## 目標
@@ -54,9 +54,9 @@ func SetupMenu(callback func(int)) {
 ```
 
 ## 驗收標準
-- [ ] `go build` 成功，無 CGO 錯誤
-- [ ] App 啟動時 menubar 出現（NSApp.mainMenu 已設定）
-- [ ] 點擊各 menu item 有 callback（可在 log 確認 menuID）
+- [x] `go build` 成功，無 CGO 錯誤
+- [x] App 啟動時 menubar 出現（NSApp.mainMenu 已設定）
+- [x] 點擊各 menu item 有 callback（可在 log 確認 menuID）
 
 ## Menu Item ID 對照表
 

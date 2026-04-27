@@ -2,11 +2,11 @@
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 title: "[T011-C] Preferences ⌘, 觸發設定面板"
 type: subtask
-status: pending
-assignee: 碼農2號
+status: done
+assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-25
+updated: 2026-04-27
 depends: [T011-A]
 ---
 
@@ -22,8 +22,8 @@ depends: [T011-A]
 - JS `showSettingsPanel()` 函數：顯示 settings overlay div
 
 ## 驗收標準
-- [ ] ⌘, 開啟設定面板
-- [ ] 其他 menu item 也正確觸發（Zoom、Open 等）
+- [x] ⌘, 開啟設定面板
+- [x] 其他 menu item 也正確觸發（Zoom、Open 等）
 
 ---
 

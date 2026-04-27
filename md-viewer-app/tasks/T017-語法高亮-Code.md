@@ -106,11 +106,11 @@ document.querySelectorAll('pre code').forEach((block) => {
 
 ## 驗收標準
 
-- [ ] 程式碼區塊有語法高亮
-- [ ] 支援 Swift, Python, JSON, JavaScript, Go, Rust
-- [ ] 右上角有複製按鈕
-- [ ] 點擊複製按鈕可複製程式碼
-- [ ] 深色/淺色主題高亮樣式正確
+- [x] 程式碼區塊有語法高亮
+- [x] 支援 Swift, Python, JSON, JavaScript, Go, Rust
+- [] 右上角有複製按鈕
+- [] 點擊複製按鈕可複製程式碼
+- [x] 深色/淺色主題高亮樣式正確
 
 ---
 
