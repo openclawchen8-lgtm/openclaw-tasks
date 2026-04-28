@@ -7,6 +7,7 @@ assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
 updated: 2026-04-28（review 更新）
+---
 
 ## 目標
 
@@ -58,11 +59,13 @@ updated: 2026-04-28（review 更新）
 ### Open File 事件處理（已實作）
 
 `main.go` 中已有：
+
 ```go
 RegisterOpenFileCallback(func(path string) {
     wv.Dispatch(func() { loadFile(path) })
 })
 ```
+
 搭配 `menu.m` 的 `application:openFile:` 或直接由 macOS 系統分發。
 
 ### 使用方式
@@ -72,6 +75,7 @@ RegisterOpenFileCallback(func(path string) {
 3. 之後雙擊 `.md` 檔案即可用 md-viewer 開啟
 
 ### 驗收條件（達成）
+
 - [x] Info.plist 完整宣告文件類型（md/markdown/txt）
 - [x] UTType 自訂義 Markdown UTI 已註冊
 - [x] `RegisterOpenFileCallback` 已處理開檔事件
@@ -79,4 +83,4 @@ RegisterOpenFileCallback(func(path string) {
 
 ---
 
-*完成時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
+_完成時間：gemini-3-flash-preview | 2026-04-28（review 更新）_

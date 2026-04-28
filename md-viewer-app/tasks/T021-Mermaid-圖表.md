@@ -22,12 +22,17 @@ updated: 2026-04-28
 
 ## 判定：Skip
 
-md-viewer-webview 從未整合 mermaid.js。htmlTemplate 中無 mermaid CDN 載入，也無 ` ```mermaid ` code block 的特殊處理。
+md-viewer-webview 從未整合 mermaid.js。htmlTemplate 中無 mermaid CDN 載入，也無 `mermaid` code block 的特殊處理。
 
 ### 若日後要實作
+
 在 main.go htmlTemplate head 中加入：
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: "default" });
+</script>
 ```
-Swift-markdown 需將 ` ```mermaid ` code block 加上 `class="mermaid"` 讓 mermaid 自動渲染。
+
+Swift-markdown 需將 `mermaid ` code block 加上 `class="mermaid"` 讓 mermaid 自動渲染。

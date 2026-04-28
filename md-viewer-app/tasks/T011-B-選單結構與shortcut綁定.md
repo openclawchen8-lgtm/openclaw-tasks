@@ -8,6 +8,7 @@ parent: T011
 created: 2026-04-25
 updated: 2026-04-28（review 更新）
 depends: [T011-A]
+---
 
 ## 目標
 
@@ -16,6 +17,7 @@ depends: [T011-A]
 ## 實際修改的檔案
 
 ### `menu.m`（擴充 T011-A）
+
 - 所有 NSMenuItem 設定 title、action、keyEquivalent、keyEquivalentModifierMask
 - About → `orderFrontStandardAboutPanel:`
 - Quit → `terminate:`
@@ -24,6 +26,7 @@ depends: [T011-A]
 - Preferences → 呼叫 `goMenuCallback`（ID=2）
 
 ### `menu.go`（擴充 T011-A）
+
 ```go
 const (
     MenuAbout         = 1
@@ -43,10 +46,11 @@ const (
 ```
 
 ## 驗收標準（達成）
+
 - [x] 所有 menu item 出現且可見
 - [x] keyboard shortcut 正常觸發
 - [x] Quit 正常關閉 app
 
 ---
 
-*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
+_建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）_

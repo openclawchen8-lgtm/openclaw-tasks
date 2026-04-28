@@ -8,6 +8,7 @@ parent: T011
 created: 2026-04-25
 updated: 2026-04-28（review 更新）
 depends: [T011-C, T011-D]
+---
 
 ## 目標
 
@@ -18,6 +19,7 @@ depends: [T011-C, T011-D]
 ### `main.go`（htmlTemplate + JS）
 
 Settings Panel HTML overlay 包含：
+
 - **主題選擇**：auto / light / dark / sepia / solarized / nord
 - **縮放靈敏度**：range slider（1-10）
 - **字型**：系統預設 / 蘋方+雅黑 / 思源+文泉 / 襯線 / 等寬
@@ -26,6 +28,7 @@ Settings Panel HTML overlay 包含：
 - **顯示行號**：checkbox
 
 JS 事件處理：
+
 - `themeSelect` change → `applyTheme()` + `saveTheme()`
 - `zoomSensitivity` input → `applyZoomSensitivity()` + `saveZoomSensitivity()`
 - `fontFamily` change → `saveFont()`（同時寫入 fontSize）
@@ -36,6 +39,7 @@ JS 事件處理：
 開啟面板時同步顯示目前設定值（fix T011-FIX-03）。
 
 ## 驗收標準（達成）
+
 - [x] 設定面板有視覺美感（與 app 主題一致）
 - [x] 所有控制項可正常操作
 - [x] 關閉按鈕（×）可關閉面板
@@ -44,4 +48,4 @@ JS 事件處理：
 
 ---
 
-*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
+_建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）_

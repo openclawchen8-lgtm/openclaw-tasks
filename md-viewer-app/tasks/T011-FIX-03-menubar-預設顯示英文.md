@@ -7,6 +7,7 @@ assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
 updated: 2026-04-28（review 更新）
+---
 
 ## 目標
 
@@ -47,10 +48,11 @@ SetupMenu(func(menuID int) { ... })
 ```
 
 ## 驗收標準（達成）
+
 - [x] app 啟動時 menubar 顯示 config 中的語言
 - [x] top-level menu item 顯示正確語言 title
 - [x] 語言切換後 menubar 即時更新
 
 ---
 
-*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
+_建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）_

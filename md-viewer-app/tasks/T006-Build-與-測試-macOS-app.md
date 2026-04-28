@@ -9,11 +9,13 @@
 - **Updated**: 2026-04-28（review 更新）
 
 ## 目標
+
 將 md-viewer-webview 打包成 macOS .app 並完成基本功能測試
 
 ## 實際 Build 流程
 
 ### build.sh（完整編譯腳本）
+
 ```
 1. go mod tidy          → 整理 Go 依賴
 2. swift build -c release → 編譯 Swift MarkdownEngine → .build/release/libMarkdownEngine.dylib
@@ -25,10 +27,12 @@
 ```
 
 ### 產出
+
 - `md-viewer.app/`（完整 macOS bundle）
 - 啟動方式：`./md-viewer.app` 或 `open md-viewer.app`
 
 ### 驗收條件（達成）
+
 - [x] `./build.sh` 成功產生 md-viewer.app
 - [x] .app 雙擊可啟動，Window 正常顯示（900×800）
 - [x] ⌘O 開檔功能正常（osascript dialog）
@@ -38,19 +42,21 @@
 - [x] 無 Crash 或 runtime panic
 
 ### 編譯環境需求
-| 工具 | 版本 |
-|------|------|
-| Go | 1.26+ darwin/arm64 |
-| Swift | 5.7+（swift build） |
-| Xcode CmdLineTools | ✅ 需已安裝 |
-| macOS SDK | ✅ 內建 |
+
+| 工具               | 版本                |
+| ------------------ | ------------------- |
+| Go                 | 1.26+ darwin/arm64  |
+| Swift              | 5.7+（swift build） |
+| Xcode CmdLineTools | ✅ 需已安裝         |
+| macOS SDK          | ✅ 內建             |
 
 ### 已知限制
+
 - macOS 專屬（依賴 Cocoa/WebKit/CGO Objective-C）
 - libMarkdownEngine.dylib 路徑與 rpath 綁定，移動 app 位置後需重新 build
 
 ---
 
-github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/96
+github_issue: <https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/96>
 
-*任務完成：寶寶 | 2026-04-28（review 更新）*
+_任務完成：寶寶 | 2026-04-28（review 更新）_

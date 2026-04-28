@@ -2,8 +2,6 @@
 
 > 兩個技術方案的詳細比較
 
----
-
 ## 📊 總覽
 
 | 項目 | md-viewer-fyne | md-viewer-webview |

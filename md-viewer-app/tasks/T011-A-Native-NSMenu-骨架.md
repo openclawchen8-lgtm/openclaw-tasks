@@ -7,6 +7,7 @@ assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
 updated: 2026-04-28（review 更新）
+---
 
 ## 目標
 
@@ -15,6 +16,7 @@ updated: 2026-04-28（review 更新）
 ## 實際修改的檔案
 
 ### `menu.m`（新）
+
 - Objective-C 程式碼
 - 建立應用程式 level NSMenu（`NSApp.mainMenu`）
 - 結構：App / File / View / Help 四層選單
@@ -23,6 +25,7 @@ updated: 2026-04-28（review 更新）
 - `goOpenFileCallback` 處理 macOS 雙擊開檔事件
 
 ### `menu.go`（新）
+
 ```go
 /*
 #cgo darwin CXXFLAGS: -DWEBVIEW_COCOA -std=c++11 -x objective-c++ -fobjc-arc
@@ -58,23 +61,24 @@ func UpdateMenuLanguage(lang string) { C.UpdateMenuLanguageTitles(C.CString(lang
 
 ## Menu Item ID 對照表
 
-| ID | Menu | Item | Shortcut |
-|----|------|------|----------|
-| 1 | App | About | - |
-| 2 | App | Preferences | ⌘, |
-| 3 | File | Open | ⌘O |
-| 4 | File | Reload | ⌘R |
-| 5 | File | Quit | ⌘Q |
-| 6 | View | Zoom In | ⌘+ |
-| 7 | View | Zoom Out | ⌘- |
-| 8 | View | Zoom Reset | ⌘0 |
-| 9 | View | Toggle Sidebar | ⌘B |
-| 10 | Help | About | - |
-| 11 | — | Fullscreen | ⌘F |
-| 12 | File | Export HTML | ⌘⇧E |
-| 13 | File | Export PDF | ⌘⇧P |
+| ID  | Menu | Item           | Shortcut |
+| --- | ---- | -------------- | -------- |
+| 1   | App  | About          | -        |
+| 2   | App  | Preferences    | ⌘,       |
+| 3   | File | Open           | ⌘O       |
+| 4   | File | Reload         | ⌘R       |
+| 5   | File | Quit           | ⌘Q       |
+| 6   | View | Zoom In        | ⌘+       |
+| 7   | View | Zoom Out       | ⌘-       |
+| 8   | View | Zoom Reset     | ⌘0       |
+| 9   | View | Toggle Sidebar | ⌘B       |
+| 10  | Help | About          | -        |
+| 11  | —    | Fullscreen     | ⌘F       |
+| 12  | File | Export HTML    | ⌘⇧E      |
+| 13  | File | Export PDF     | ⌘⇧P      |
 
 ## 驗收標準（達成）
+
 - [x] `go build` 成功，無 CGO 錯誤
 - [x] App 啟動時 menubar 出現
 - [x] 點擊各 menu item 有 callback
@@ -82,4 +86,4 @@ func UpdateMenuLanguage(lang string) { C.UpdateMenuLanguageTitles(C.CString(lang
 
 ---
 
-*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
+_建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）_
