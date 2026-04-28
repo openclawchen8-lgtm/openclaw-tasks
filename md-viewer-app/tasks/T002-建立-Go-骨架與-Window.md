@@ -1,12 +1,17 @@
-# T002 - 建立 Go 骨架與 Window
+---
+title: 建立 Go 骨架與 Window
+status: done
+type: Development
+assignee: 寶寶
+parent: T001
+created: 2026-04-23
+updated: 2026-04-23
+completed: 2026-04-23
+note: 骨架後因轉向 webview 方案而重構，見 T008
+github_issue: <https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95>
+---
 
-- **Status**: done
-- **Type**: Development
-- **Assignee**: 寶寶
-- **Parent**: T001
-- **Created**: 2026-04-23
-- **Completed**: 2026-04-23
-- **Note**: 骨架後因轉向 webview 方案而重構，見 T008
+# T002 - 建立 Go 骨架與 Window
 
 ## 目標
 

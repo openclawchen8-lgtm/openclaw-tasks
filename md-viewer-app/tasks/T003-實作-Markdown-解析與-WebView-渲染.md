@@ -1,12 +1,16 @@
-# T003 - 實作 Markdown 解析與 WebView 渲染
+---
+title: 實作 Markdown 解析與 WebView 渲染
+status: done
+type: Development
+assignee: 碼農2號（實作）/ 寶寶（規劃）
+parent: T002
+created: 2026-04-23
+updated: 2026-04-28
+completed: 2026-04-25
+github_issue: <https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/91>
+---
 
-- **Status**: done
-- **Type**: Development
-- **Assignee**: 碼農2號（實作）/ 寶寶（規劃）
-- **Parent**: T002
-- **Created**: 2026-04-23
-- **Completed**: 2026-04-25
-- **Updated**: 2026-04-28（review 更新）
+# T003 - 實作 Markdown 解析與 WebView 渲染
 
 ## 目標
 

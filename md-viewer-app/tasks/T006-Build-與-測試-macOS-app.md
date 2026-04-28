@@ -1,12 +1,16 @@
-# T006 - Build 與測試 macOS App
+---
+title: Build 與測試 macOS App
+status: done
+type: Build
+assignee: 寶寶
+parent: T003, T004, T005
+created: 2026-04-23
+updated: 2026-04-28
+completed: 2026-04-28
+github_issue: <https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/96>
+---
 
-- **Status**: done
-- **Type**: Build
-- **Assignee**: 寶寶
-- **Parent**: T003, T004, T005
-- **Created**: 2026-04-23
-- **Completed**: 2026-04-28
-- **Updated**: 2026-04-28（review 更新）
+# T006 - Build 與測試 macOS App
 
 ## 目標
 
