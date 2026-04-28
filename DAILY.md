@@ -1,6 +1,6 @@
 # 📅 Daily Dashboard - 2026-04-28
 
-> 最後更新: 2026-04-28 19:01 · 自動生成
+> 最後更新: 2026-04-28 19:11 · 自動生成
 
 ---
 
@@ -8,12 +8,12 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| md-viewer-app | T022-搜尋文件內容 | [T022] 搜尋文件內容 |
-| md-viewer-app | T023-滾動位置保持 | [T023] 滾動位置保持 |
-| md-viewer-app | T024-視窗大小位置記憶 | [T024] 視窗大小/位置記憶 |
-| md-viewer-app | T025-最近開啟的檔案 | [T025] 最近開啟的檔案 |
-| md-viewer-app | T026-專注模式 | [T026] 專注模式（Focus Mode） |
-| md-viewer-app | T027-預覽連結懸停 | [T027] 連結懸停預覽 |
+| md-viewer-app | [T022-搜尋文件內容](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T022-搜尋文件內容.md) | [T022] 搜尋文件內容 |
+| md-viewer-app | [T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md) | [T023] 滾動位置保持 |
+| md-viewer-app | [T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md) | [T024] 視窗大小/位置記憶 |
+| md-viewer-app | [T025-最近開啟的檔案](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T025-最近開啟的檔案.md) | [T025] 最近開啟的檔案 |
+| md-viewer-app | [T026-專注模式](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T026-專注模式.md) | [T026] 專注模式（Focus Mode） |
+| md-viewer-app | [T027-預覽連結懸停](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T027-預覽連結懸停.md) | [T027] 連結懸停預覽 |
 
 ---
 
@@ -21,12 +21,15 @@
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| md-viewer-app | T003-實作-Markdown-解析與-WebView-渲染 | 實作 Markdown 解析與 WebView 渲染 |
-| md-viewer-app | T005-實作-深色模式支援 | 實作深色模式支援 |
-| md-viewer-app | T006-Build-與-測試-macOS-app | Build 與測試 macOS App |
-| md-viewer-app | T008-專案分裂與對比評估 | 專案分裂與對比評估 |
-| md-viewer-app | T017-語法高亮-Code | [T017] 語法高亮 Code |
-| md-viewer-app | T019-PDF-HTML-匯出 | [T019] PDF/HTML 匯出 |
+| github-data-review | [T008](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/github-data-review/tasks/T008.md) | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |
+| github-data-review | [T009](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/github-data-review/tasks/T009.md) | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |
+| md-viewer-app | [T003-實作-Markdown-解析與-WebView-渲染](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T003-實作-Markdown-解析與-WebView-渲染.md) | 實作 Markdown 解析與 WebView 渲染 |
+| md-viewer-app | [T005-實作-深色模式支援](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T005-實作-深色模式支援.md) | 實作深色模式支援 |
+| md-viewer-app | [T006-Build-與-測試-macOS-app](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T006-Build-與-測試-macOS-app.md) | Build 與測試 macOS App |
+| md-viewer-app | [T008-專案分裂與對比評估](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T008-專案分裂與對比評估.md) | 專案分裂與對比評估 |
+| md-viewer-app | [T017-語法高亮-Code](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T017-語法高亮-Code.md) | [T017] 語法高亮 Code |
+| md-viewer-app | [T019-PDF-HTML-匯出](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T019-PDF-HTML-匯出.md) | [T019] PDF/HTML 匯出 |
+| sinotrade-scraper | [T007](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/sinotrade-scraper/tasks/T007.md) | 抓取報告公開預覽內容（第一段摘要） |
 
 ---
 
@@ -40,12 +43,12 @@ _無_
 
 | 專案 | 任務 | 標題 |
 | -- | -- | -- |
-| gold-analysis-advanced | T001 | 機器學習模型開發 |
-| gold-analysis-advanced | T002 | ML 模型整合與優化 |
-| gold-analysis-advanced | T004 | 實盤交易對接 |
-| kgi-monitor | T006 | 驗證與測試 |
-| md-viewer-app | T007-自動化測試快捷鍵與縮放 | 自動化測試快捷鍵與縮放功能 |
-| revenue-zero-cost | T008 | 技術社群曝光 |
+| gold-analysis-advanced | [T001](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/gold-analysis-advanced/tasks/T001.md) | 機器學習模型開發 |
+| gold-analysis-advanced | [T002](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/gold-analysis-advanced/tasks/T002.md) | ML 模型整合與優化 |
+| gold-analysis-advanced | [T004](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/gold-analysis-advanced/tasks/T004.md) | 實盤交易對接 |
+| kgi-monitor | [T006](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/kgi-monitor/tasks/T006.md) | 驗證與測試 |
+| md-viewer-app | [T007-自動化測試快捷鍵與縮放](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T007-自動化測試快捷鍵與縮放.md) | 自動化測試快捷鍵與縮放功能 |
+| revenue-zero-cost | [T008](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/revenue-zero-cost/tasks/T008.md) | 技術社群曝光 |
 
 ---
 
@@ -53,20 +56,15 @@ _無_
 
 | 專案 | 任務 | 標題 | 優先 |
 | -- | -- | -- | -- |
-| clawhub-oauth-investigation | T001 | T001 |  |
-| clawhub-oauth-investigation | T002 | T002 |  |
-| github-data-review | T008 | 請確認所有排成備份皆有正常備份。並請提供每個備份的review結果(用網頁截圖及本地驗證截圖)及連結 |  |
-| github-data-review | T009 | 請檢視https://github.com/openclawchen8-lgtm/openclaw- |  |
-| md-viewer-app | T020-數學公式 | T020-數學公式 |  |
-| md-viewer-app | T022-搜尋文件內容 | [T022] 搜尋文件內容 |  |
-| md-viewer-app | T023-滾動位置保持 | [T023] 滾動位置保持 |  |
-| md-viewer-app | T024-視窗大小位置記憶 | [T024] 視窗大小/位置記憶 |  |
-| md-viewer-app | T025-最近開啟的檔案 | [T025] 最近開啟的檔案 |  |
-| md-viewer-app | T026-專注模式 | [T026] 專注模式（Focus Mode） |  |
-| md-viewer-app | T027-預覽連結懸停 | [T027] 連結懸停預覽 |  |
-| session-logger-plugin | T005 | 安裝與測試驗證 |  |
-| sinotrade-scraper | T007 | 抓取報告公開預覽內容（第一段摘要） |  |
-| sinotrade-scraper | T008 | 完整報告內容讀取（需登入，暫緩） |  |
+| md-viewer-app | [T020-數學公式](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T020-數學公式.md) | T020-數學公式 |  |
+| md-viewer-app | [T022-搜尋文件內容](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T022-搜尋文件內容.md) | [T022] 搜尋文件內容 |  |
+| md-viewer-app | [T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md) | [T023] 滾動位置保持 |  |
+| md-viewer-app | [T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md) | [T024] 視窗大小/位置記憶 |  |
+| md-viewer-app | [T025-最近開啟的檔案](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T025-最近開啟的檔案.md) | [T025] 最近開啟的檔案 |  |
+| md-viewer-app | [T026-專注模式](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T026-專注模式.md) | [T026] 專注模式（Focus Mode） |  |
+| md-viewer-app | [T027-預覽連結懸停](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T027-預覽連結懸停.md) | [T027] 連結懸停預覽 |  |
+| session-logger-plugin | [T005](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/session-logger-plugin/tasks/T005.md) | 安裝與測試驗證 |  |
+| sinotrade-scraper | [T008](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/sinotrade-scraper/tasks/T008.md) | 完整報告內容讀取（需登入，暫緩） |  |
 
 ---
 

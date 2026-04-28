@@ -5,7 +5,7 @@
 | # | Task | Status |
 |---|------|--------|
 | T001 | Issues 調查報告（10 issues + 3 PRs） | ✅ done |
-| T002 | 本地診斷與修復方案 | 🔄 in-progress |
+| T002 | 本地診斷與修復方案 | ✅ done |
 
 ## 摘要
 
