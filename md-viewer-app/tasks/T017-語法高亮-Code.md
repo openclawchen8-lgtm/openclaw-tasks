@@ -9,8 +9,6 @@ completed: 2026-04-28
 updated: 2026-04-28
 ---
 
-# T017 - 語法高亮 Code
-
 ## 目標
 
 整合 highlight.js 為程式碼區塊提供語法高亮，並加上「一鍵複製」按鈕。
@@ -42,41 +40,17 @@ updated: 2026-04-28
 
 ### 一鍵複製按鈕（JS initCodeBlocks）
 
-```javascript
-window.initCodeBlocks = function () {
-  document.querySelectorAll("pre").forEach(function (pre) {
-    var btn = document.createElement("button");
-    btn.className = "code-copy-btn";
-    btn.onclick = function () {
-      navigator.clipboard.writeText(code.textContent).then(function () {
-        btn.classList.add("copied");
-        btn.innerText = "Copied!";
-        setTimeout(function () {
-          /* reset */
-        }, 2000);
-      });
-    };
-    pre.appendChild(btn);
-  });
-};
-```
+滑鼠移過程式碼區塊，右上角浮現複製按鈕，點擊即可複製內容。成功後顯示「Copied!」回饋（2 秒後還原）。
 
 ### 行號顯示（JS applyLineNumbers）
 
 - 設定面板可開關「顯示行號」
 - 開啟時 `<code>` 改為 CSS Grid 佈局（行號 + 內容分欄）
-- 行號本身無語法高亮，純視覺輔助
 
-### 驗收條件（達成）
+## 驗收條件（達成）
 
 - [x] 程式碼區塊有語法高亮（190+ 語言）
 - [x] 深色/淺色模式高亮主題正確切換
 - [x] 右上角有複製按鈕（hover 時顯示）
 - [x] 點擊複製成功顯示「Copied!」回饋
 - [x] 行號顯示功能正常（設定面板開關）
-
----
-
-github_issue: <https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/101>
-
-_任務完成：gemini-3-flash-preview | 2026-04-28（review 更新）_

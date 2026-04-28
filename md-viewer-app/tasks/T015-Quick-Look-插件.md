@@ -8,14 +8,6 @@ created: 2026-04-24
 updated: 2026-04-28
 ---
 
-# T015 - Quick Look 插件
-
-- **Status**: skip
-- **Type**: macOS Extension
-- **Assignee**: —
-- **Created**: 2026-04-24
-- **Updated**: 2026-04-28
-
 ## 目標（原始）
 
 實作 macOS Quick Look 插件，讓 Finder 可以直接預覽 .md 檔案。
