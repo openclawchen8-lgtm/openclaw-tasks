@@ -1,10 +1,20 @@
+---
+github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/99
+title: "[T015] Quick Look 插件"
+status: skip
+type: macOS Extension
+assignee: —
+created: 2026-04-24
+updated: 2026-04-28
+---
+
 # T015 - Quick Look 插件
 
 - **Status**: skip
 - **Type**: macOS Extension
 - **Assignee**: —
 - **Created**: 2026-04-24
-- **Updated**: 2026-04-28（review 更新）
+- **Updated**: 2026-04-28
 
 ## 目標（原始）
 
@@ -27,7 +37,3 @@ Quick Look Extension 需 Swift + Xcode 建立 `.qlgenerator` bundle，與 Go 專
 2. 實作 `QLPreviewingController`
 3. 呼叫 Swift-markdown 解析（可抽離成 shared framework）
 4. 打包為 `.qlgenerator`，放到 `~/Library/QuickLook/`
-
----
-
-github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/99

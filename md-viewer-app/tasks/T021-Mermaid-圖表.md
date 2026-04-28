@@ -1,10 +1,20 @@
+---
+github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/105
+title: "[T021] Mermaid 圖表"
+status: skip
+type: Feature
+assignee: —
+created: 2026-04-24
+updated: 2026-04-28
+---
+
 # T021 - Mermaid 圖表
 
 - **Status**: skip
 - **Type**: Feature
 - **Assignee**: —
 - **Created**: 2026-04-24
-- **Updated**: 2026-04-28（review 更新）
+- **Updated**: 2026-04-28
 
 ## 目標（原始）
 
