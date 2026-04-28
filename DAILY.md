@@ -1,6 +1,6 @@
 # 📅 Daily Dashboard - 2026-04-28
 
-> 最後更新: 2026-04-28 19:26 · 自動生成
+> 最後更新: 2026-04-28 19:28 · 自動生成
 
 ---
 
@@ -66,7 +66,6 @@
 | md-viewer-app | [T026-專注模式](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T026-專注模式.md) | [T026] 專注模式（Focus Mode） | low |
 | md-viewer-app | [T027-預覽連結懸停](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T027-預覽連結懸停.md) | [T027] 連結懸停預覽 | low |
 | session-logger-plugin | [T005](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/session-logger-plugin/tasks/T005.md) | 安裝與測試驗證 | low |
-| md-viewer-app | [T020-數學公式](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T020-數學公式.md) | T020-數學公式 |  |
 
 ---
 
