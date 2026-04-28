@@ -6,25 +6,24 @@ status: done
 assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-27
+updated: 2026-04-28（review 更新）
 depends: [T011-A]
----
 
 ## 目標
 
 讓 ⌘, 觸發設定面板（WebView HTML overlay）開啟。
 
-## 修改的檔案
+## 實際修改的檔案
 
 ### `main.go`
-- 接收 `MenuPreferences`（ID=2）callback
-- callback 執行 `wv.Eval("showSettingsPanel()")`
-- JS `showSettingsPanel()` 函數：顯示 settings overlay div
+- `MenuPreferences`（ID=2）callback → `wv.Eval("window.toggleSettingsPanel && window.toggleSettingsPanel()")`
+- JS `toggleSettingsPanel()` 函數：切換 settings overlay 顯示/隱藏狀態
 
-## 驗收標準
+## 驗收標準（達成）
 - [x] ⌘, 開啟設定面板
-- [x] 其他 menu item 也正確觸發（Zoom、Open 等）
+- [x] 再按 ⌘, 或 Esc 關閉設定面板
+- [x] 其他 menu item 也正確觸發
 
 ---
 
-*建立時間：2026-04-25 by 寶寶*
+*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*

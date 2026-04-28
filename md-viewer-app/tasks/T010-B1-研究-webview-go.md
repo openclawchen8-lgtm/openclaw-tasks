@@ -1,21 +1,23 @@
-# T010-B1: 研究 webview_go 是否暴露 NSWindow
+---
+github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/97
+title: "[T010-B1] 研究 webview_go 是否暴露 NSWindow"
+type: subtask
+status: done
+assignee: 寶寶
+parent: T010
+created: 2026-04-24
+updated: 2026-04-28（review 更新）
 
-## 結論：✅ 可以！
+## 結論：✅ 可以
 
-webview_go 已有 `Window()` 方法：
+webview_go 的 `Window()` 方法：
 ```go
 func (w *webview) Window() unsafe.Pointer
 ```
+在 macOS 上回傳 NSWindow pointer（可用於 CGO 呼叫 Objective-C API）。
 
-在 macOS 上，這會回傳 NSWindow pointer。
-
-**參考來源**：
-- `/Users/claw/go/pkg/mod/github.com/webview/webview_go@v0.0.0-20240831120633-6173450d4dd6/webview.go` 第 77 行
-- 文件註解："When using Cocoa backend the pointer is NSWindow pointer"
-
-## 下一步
-- T010-B2: 用 CGO + Objective-C 實作 NSDraggingDestination
+**應用**：實作 DragDropWindowHelper overlay 時取得 NSWindow 指標。
 
 ---
-github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/97
-*2026-04-24 17:20*
+
+*建立時間：寶寶 | 2026-04-28（review 更新）*

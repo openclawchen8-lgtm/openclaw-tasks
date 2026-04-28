@@ -6,43 +6,42 @@ status: done
 assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-27
+updated: 2026-04-28（review 更新）
 depends: [T011-F]
----
 
 ## 目標
 
-讓 JS zoom step 讀取 `window.config.zoomSensitivity` 動態生效。
+讓 JS zoom step 讀取 `window.mdConfig.zoomSensitivity` 動態套用。
 
-## 修改的檔案
+## 實際實作（main.go JS）
 
-### `main.go`
-- 啟動時：`wv.Eval("applyZoomSensitivity(config.zoomSensitivity)")`
-- `loadConfig` 回傳 JSON 注入 JS：`window.config = {zoomSensitivity: X, theme: Y}`
-
-### `main.go`（JS 部分）
 ```javascript
-var step = 0.1; // default
+window.zoomState = { level: 1.0, step: 0.1 };
+
 window.applyZoomSensitivity = function(level) {
-    step = [0, 0.05, 0.1, 0.2][level] || 0.1;
+    window.zoomState.step = 0.02 * level;
 };
-// 初始化時套用
-window.applyZoomSensitivity(window.config && window.config.zoomSensitivity || 2);
+
+window.zoomIn = function() { window.applyZoomLevel(window.zoomState.level + window.zoomState.step); };
+window.zoomOut = function() { window.applyZoomLevel(window.zoomState.level - window.zoomState.step); };
+window.zoomReset = function() { window.applyZoomLevel(1.0); };
 ```
+
+`applyZoomLevel` 同步呼叫 `saveZoomLevel()` 持久化。
 
 ## Zoom Sensitivity 等級對照
 
-| 等級 | 名稱 | step |
-|------|------|------|
-| 1 | 低 | 0.05 |
-| 2 | 中（預設） | 0.10 |
-| 3 | 高 | 0.20 |
+| slider 值 | step |
+|----------|------|
+| 1 | 0.02 |
+| 5（預設）| 0.10 |
+| 10 | 0.20 |
 
-## 驗收標準
+## 驗收標準（達成）
 - [x] 縮放靈敏度設定後立即生效
 - [x] ⌘+ / ⌘- 行為符合設定等級
 - [x] 重開 app 後等級保留
 
 ---
 
-*建立時間：2026-04-25 by 寶寶*
+*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*

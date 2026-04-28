@@ -6,34 +6,31 @@ status: done
 assignee: gemini-3-flash-preview
 parent: T011
 created: 2026-04-25
-updated: 2026-04-27
----
+updated: 2026-04-28（review 更新）
 
 ## 目標
 
 建立 Native macOS NSMenu 的 CGO 橋接骨架，讓 Go 能在 app 啟動時建立原生 menubar。
 
-## 修改的檔案
+## 實際修改的檔案
 
 ### `menu.m`（新）
 - Objective-C 程式碼
 - 建立應用程式 level NSMenu（`NSApp.mainMenu`）
-- 結構：
-  - App menu（About、Preferences ⌘,）
-  - File menu（Open ⌘O、Reload ⌘R、Quit ⌘Q）
-  - View menu（Zoom +/−/0、Toggle Sidebar ⌘B）
-  - Help menu（About md-viewer）
+- 結構：App / File / View / Help 四層選單
 - 每個 menu item 的 action 對應一個 ObjC selector
 - Selector 呼叫 `goMenuCallback(callbackID)` C 函數
+- `goOpenFileCallback` 處理 macOS 雙擊開檔事件
 
 ### `menu.go`（新）
 ```go
 /*
 #cgo darwin CXXFLAGS: -DWEBVIEW_COCOA -std=c++11 -x objective-c++ -fobjc-arc
 #cgo darwin LDFLAGS: -framework AppKit
-
 #include <stdlib.h>
-void goMenuCallback(int menuID);
+extern void goMenuCallback(int menuID);
+void SetupMainMenu(void);
+void UpdateMenuLanguageTitles(const char *lang);
 */
 import "C"
 import "unsafe"
@@ -45,18 +42,19 @@ func goMenuCallback(menuID C.int) {
     }
 }
 
-var menuCallback func(int)
-
-func SetupMenu(callback func(int)) {
-    menuCallback = callback
-    C.SetupMainMenu()
+//export goOpenFileCallback
+func goOpenFileCallback(path *C.char) {
+    if openFileCallback != nil {
+        openFileCallback(C.GoString(path))
+    }
 }
-```
 
-## 驗收標準
-- [x] `go build` 成功，無 CGO 錯誤
-- [x] App 啟動時 menubar 出現（NSApp.mainMenu 已設定）
-- [x] 點擊各 menu item 有 callback（可在 log 確認 menuID）
+var openFileCallback func(string)
+
+func RegisterOpenFileCallback(callback func(string)) { openFileCallback = callback }
+func SetupMenu(callback func(int)) { menuCallback = callback; C.SetupMainMenu() }
+func UpdateMenuLanguage(lang string) { C.UpdateMenuLanguageTitles(C.CString(lang)) }
+```
 
 ## Menu Item ID 對照表
 
@@ -72,7 +70,16 @@ func SetupMenu(callback func(int)) {
 | 8 | View | Zoom Reset | ⌘0 |
 | 9 | View | Toggle Sidebar | ⌘B |
 | 10 | Help | About | - |
+| 11 | — | Fullscreen | ⌘F |
+| 12 | File | Export HTML | ⌘⇧E |
+| 13 | File | Export PDF | ⌘⇧P |
+
+## 驗收標準（達成）
+- [x] `go build` 成功，無 CGO 錯誤
+- [x] App 啟動時 menubar 出現
+- [x] 點擊各 menu item 有 callback
+- [x] 支援 macOS 雙擊 .md 開檔
 
 ---
 
-*建立時間：2026-04-25 by 寶寶*
+*建立時間：gemini-3-flash-preview | 2026-04-28（review 更新）*
