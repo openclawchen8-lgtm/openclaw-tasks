@@ -1,6 +1,6 @@
 # 📅 Daily Dashboard - 2026-04-28
 
-> 最後更新: 2026-04-28 19:28 · 自動生成
+> 最後更新: 2026-04-28 19:47 · 自動生成
 
 ---
 
@@ -46,7 +46,6 @@
 
 | 專案 | 任務 | 標題 | 優先 |
 | -- | -- | -- | -- |
-| kgi-monitor | [T006](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/kgi-monitor/tasks/T006.md) | 驗證與測試 | medium |
 | md-viewer-app | [T007-自動化測試快捷鍵與縮放](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T007-自動化測試快捷鍵與縮放.md) | 自動化測試快捷鍵與縮放功能 | medium |
 | gold-analysis-advanced | [T001](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/gold-analysis-advanced/tasks/T001.md) | 機器學習模型開發 | low |
 | gold-analysis-advanced | [T002](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/gold-analysis-advanced/tasks/T002.md) | ML 模型整合與優化 | low |

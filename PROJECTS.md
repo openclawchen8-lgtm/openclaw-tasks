@@ -1,6 +1,6 @@
 # 📁 Projects Dashboard
 
-> 最後更新: 2026-04-28 19:15 · 自動生成
+> 最後更新: 2026-04-28 19:47 · 自動生成
 
 ---
 
@@ -10,11 +10,21 @@
 |------|------|
 | 專案數 | 42 |
 | 任務總數 | 265 |
-| ✅ 已完成 | 241 |
-| ⬜ 待處理 | 9 |
-| 🔄 進行中 | 6 |
-| ⏭️ 跳過 | 9 |
-| 總完成率 | 90% |
+| ✅ 已完成 | 242 |
+| ⬜ 待處理 | 7 |
+| 🔄 進行中 | 5 |
+| ⏭️ 跳過 | 11 |
+| 總完成率 | 91% |
+
+## 🔥 待處理高優先級任務
+
+| 專案 | 任務 | 標題 |
+|------|------|------|
+| md-viewer-app | [T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md) | [T023] 滾動位置保持 |
+| md-viewer-app | [T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md) | [T024] 視窗大小/位置記憶 |
+
+---
+
 ## 📋 專案列表
 
 | 狀態 | 專案 | 總數 | ✅ | ⬜ | 🔄 | 進度 | 更新 |
@@ -40,10 +50,12 @@
 | ✅ | [gpt-sovits-voices-research](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/gpt-sovits-voices-research) | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-21 |
 | ✅ | [ideas2tasks](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/ideas2tasks) | 11 | 11 | 0 | 0 | ████████████████████ 100% | 2026-04-23 |
 | ✅ | [ideas2tasks-fix](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/ideas2tasks-fix) | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
-| 🔄 | [kgi-monitor](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/kgi-monitor) | 6 | 5 | 0 | 1 | ████████████████░░░░ 83% | — |
+| ✅ | [kgi-monitor](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/kgi-monitor) | 6 | 6 | 0 | 0 | ████████████████████ 100% | — |
 | ✅ | [lifecycle-sync-fix](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/lifecycle-sync-fix) | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-21 |
 | ✅ | [llm-router](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/llm-router) | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
-| 🔄 | [md-viewer-app](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/md-viewer-app) | 41 | 27 | 7 | 1 | █████████████░░░░░░░ 65% | 2026-04-28（review 更新） |
+| 🔄 | [md-viewer-app](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/md-viewer-app) | 41 | 27 | 6 | 1 | █████████████░░░░░░░ 65% | 2026-04-28（review 更新） |
+  **[T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md)**: [T023] 滾動位置保持
+  **[T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md)**: [T024] 視窗大小/位置記憶
 | ✅ | [member-backup](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-backup) | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
 | ✅ | [member-config-review](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-config-review) | 7 | 7 | 0 | 0 | ████████████████████ 100% | — |
 | ✅ | [member-tasks](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-tasks) | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |
@@ -54,7 +66,7 @@
 | ✅ | [security-improvements](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/security-improvements) | 7 | 7 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |
 | ✅ | [security-tools](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/security-tools) | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-09 |
 | ⬜ | [session-logger-plugin](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/session-logger-plugin) | 5 | 4 | 1 | 0 | ████████████████░░░░ 80% | 2026-04-20 |
-| ⬜ | [sinotrade-scraper](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/sinotrade-scraper) | 9 | 8 | 1 | 0 | █████████████████░░░ 88% | 2026-04-28 |
+| ⏭️ | [sinotrade-scraper](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/sinotrade-scraper) | 9 | 8 | 0 | 0 | █████████████████░░░ 88% | 2026-04-28 |
 | ✅ | [skill-enhancement](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/skill-enhancement) | 4 | 4 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |
 | ✅ | [task-url-repair](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/task-url-repair) | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-20 |
 | ✅ | [tasks-executor](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/tasks-executor) | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-05 |

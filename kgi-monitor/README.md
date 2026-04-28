@@ -24,7 +24,7 @@
 | T003 | 時間範圍配置 | 📋 pending | 碼農1號 |
 | T004 | Telegram 通知整合 | 📋 pending | 碼農1號 |
 | T005 | Cron 定時執行 | 📋 pending | 寶寶 |
-| T006 | 驗證與測試 | 📋 pending | 樂樂 |
+| T006 | 驗證與測試 | ✅ done | 豪 |
 
 ## 腳本位置
 - 主腳本：`/Users/claw/scripts/kgi_monitor.py`
