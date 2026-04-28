@@ -1,6 +1,6 @@
 # 📅 Daily Dashboard - 2026-04-28
 
-> 最後更新: 2026-04-28 18:59 · 自動生成
+> 最後更新: 2026-04-28 19:01 · 自動生成
 
 ---
 
@@ -65,7 +65,6 @@ _無_
 | md-viewer-app | T026-專注模式 | [T026] 專注模式（Focus Mode） |  |
 | md-viewer-app | T027-預覽連結懸停 | [T027] 連結懸停預覽 |  |
 | session-logger-plugin | T005 | 安裝與測試驗證 |  |
-| sinotrade-scraper | T001 | T001 |  |
 | sinotrade-scraper | T007 | 抓取報告公開預覽內容（第一段摘要） |  |
 | sinotrade-scraper | T008 | 完整報告內容讀取（需登入，暫緩） |  |
 
