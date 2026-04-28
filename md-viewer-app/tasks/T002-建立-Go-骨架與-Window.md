@@ -6,52 +6,86 @@
 - **Parent**: T001
 - **Created**: 2026-04-23
 - **Completed**: 2026-04-23
+- **Note**: 骨架後因轉向 webview 方案而重構，見 T008
 
 ## 目標
-在 md-viewer-app 專案建立基本的 Go 結構，包含主程式骨架與基本 Window
+建立 md-viewer-webview 的 Go 結構骨架，包含主程式與基本 Window
 
-## 驗收條件
-- [x] go.mod 建立完成，依賴 Fyne + goldmark
-- [x] main.go 能編譯運行
-- [x] Window 有基本的側邊欄和預覽區域佈局
-- [x] 預覽區預設顯示歡迎頁
-
-## 實際產出
+## 實際產出（最終版本）
 
 ### 目錄結構
 ```
-md-viewer-app/
-├── main.go              ← 入口
-├── go.mod / go.sum      ← Go module
-├── FyneApp.toml         ← Fyne 打包元數據
-├── ui/
-│   ├── window.go        ← 主視窗、選單列、快捷鍵
-│   ├── sidebar.go       ← 側邊欄檔案列表
-│   ├── preview.go       ← Markdown 預覽區
-│   └── theme.go         ← 主題（深色模式）
+md-viewer-webview/
+├── main.go              ← 入口（webview_go + CGO Swift）
+├── go.mod / go.sum
+├── build.sh             ← 編譯+打包腳本
+├── config.go            ← Config 持久化（~/.md-viewer/config.json）
+├── menu.go              ← Native NSMenu CGO 橋接
+├── menu.m               ← Objective-C menubar 實作
+├── dragdrop.go          ← 拖拉開啟（CGO bridge）
+├── dragdrop.m           ← ObjC drag overlay
+├── export.go            ← HTML/PDF 匯出
+├── export.m             ← ObjC PDF export
 ├── core/
-│   └── file_tree.go     ← 檔案讀取 + 資料夾掃描
-└── assets/              ← （預留）
+│   └── renderer.go      ← Swift-markdown CGO 包裝
+├── Sources/MarkdownEngine/  ← Swift 原始碼
+│   ├── Package.swift
+│   └── Sources/MarkdownEngine/Engine.swift
+├── md-viewer.app/       ← 打包產出
+└── test.md / example.md ← 測試檔案
 ```
 
-### 功能實作
+### 核心模組說明
+| 模組 | 功能 |
+|------|------|
+| `main.go` | webview_go 視窗、CSS 主題、JS 互動、fsnotify 監控 |
+| `config.go` | 讀寫 `~/.md-viewer/config.json` |
+| `menu.go/.m` | Native macOS menubar（CGO） |
+| `core/renderer.go` | Swift-markdown FFI 包裝 |
+| `dragdrop.go/.m` | Finder 拖拉開啟（CGO overlay） |
+| `export.go/.m` | HTML/PDF 匯出（CGO） |
+
+### 技術棧
+| 層 | 技術 |
+|----|------|
+| UI | webview_go (WebKit WKWebView) |
+| Markdown 解析 | swift-markdown（CGO → libMarkdownEngine.dylib） |
+| CSS 主題 | GitHub 風格 CSS 變數（6 主題） |
+| 語法高亮 | highlight.js（CDN） |
+| i18n | 5 語言（JS 動態切換） |
+| 設定持久化 | JSON 檔案（`~/.md-viewer/config.json`） |
+| 檔案監控 | fsnotify（Go） |
+| 原生功能 | CGO + Objective-C（menu/drag/export） |
+
+### 功能對照
 | 功能 | 狀態 | 說明 |
 |------|------|------|
-| 主視窗 | ✅ | 900×600，HSplit 佈局 |
-| 側邊欄 | ✅ | 檔案列表 + 點擊切換預覽 |
-| 預覽區 | ✅ | `widget.NewRichTextFromMarkdown()` 內建 goldmark |
-| 選單列 | ✅ | 檔案 / 顯示 / 說明 |
-| 快捷鍵 | ✅ | ⌘O / ⌘⇧O / ⌘B |
-| 深色模式 | ✅ | 自動跟隨 macOS（Fyne 內建） |
-| .app 打包 | ✅ | 31MB .app，啟動正常 |
+| 主視窗 | ✅ | webview 900×800 |
+| NSMenu 原生選單 | ✅ | CGO 實作 |
+| 快捷鍵 | ✅ | ⌘O/⌘R/⌘+/-/⌘0/⌘,/⌘F/⌘Q |
+| 深色模式 | ✅ | 6 主題 + auto |
+| 設定面板 | ✅ | WebView HTML overlay |
+| 拖拉開啟 | ✅ | HTML5 + CGO overlay |
+| 檔案監控自動重載 | ✅ | fsnotify + reload flash |
+| HTML/PDF 匯出 | ✅ | CGO + WebView print |
+| i18n | ✅ | 5 語言 |
+| 行號顯示 | ✅ | 可在設定中開關 |
+| 程式碼複製 | ✅ | 一鍵複製按鈕 |
 
-### API 修正記錄
+### 驗收條件（達成）
+- [x] `go build` 成功，無 CGO 錯誤
+- [x] `./md-viewer test.md` 可啟動
+- [x] `./build.sh` 成功產生 .app bundle
+- [x] 雙擊 .app 可啟動，Window 正常顯示
+
+### API 修正記錄（歷史）
 - `widget.NewMarkdown()` → 不存在，正確是 `widget.NewRichTextFromMarkdown()`
 - `dialog.ShowFolderOpenFunc` → 正確是 `dialog.ShowFolderOpen`
 - `fyne.Shortcut{}` → 不存在，正確是 `desktop.CustomShortcut{}`
-- Fyne 模組名 `md-viewer-app` 會變成 exe 名 → 用 FyneApp.toml 覆蓋
+- **最終放棄 Fyne，走 webview 方案（見 T008）**
 
 ---
+
 github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/95
 
-*任務完成：寶寶 | 2026-04-23*
+*任務完成：寶寶 | 2026-04-23（骨架建立）｜2026-04-28（review 更新）*
