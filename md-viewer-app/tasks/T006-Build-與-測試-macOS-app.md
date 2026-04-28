@@ -1,28 +1,56 @@
-github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/94
 # T006 - Build 與測試 macOS App
 
-- **Status**: pending
+- **Status**: done
 - **Type**: Build
 - **Assignee**: 寶寶
 - **Parent**: T003, T004, T005
 - **Created**: 2026-04-23
+- **Completed**: 2026-04-28
+- **Updated**: 2026-04-28（review 更新）
 
 ## 目標
-將 md-viewer-app 打包成 macOS .app 並完成基本功能測試
+將 md-viewer-webview 打包成 macOS .app 並完成基本功能測試
 
-## 驗收條件
-- [ ] `fyne package` 成功產生 .app bundle
-- [ ] .app 雙擊可啟動，Window 正常顯示
-- [ ] Open File 功能正常（Open... / Cmd+O）
-- [ ] Markdown 預覽正常渲染
-- [ ] 側邊欄檔案列表正常運作
-- [ ] 沒有 Crash 或 runtime panic
+## 實際 Build 流程
 
-## Build 命令
-```bash
-fyne package -icon icon.png -category public.app-category.productivity
+### build.sh（完整編譯腳本）
+```
+1. go mod tidy          → 整理 Go 依賴
+2. swift build -c release → 編譯 Swift MarkdownEngine → .build/release/libMarkdownEngine.dylib
+3. go build -o md-viewer → 編譯 Go 程式（含 CGO）
+4. 建立 md-viewer.app bundle 目錄結構
+5. 複製 libMarkdownEngine.dylib → Contents/Frameworks/
+6. install_name_tool 修正 rpath（@executable_path/../Frameworks/）
+7. 複製 md-viewer → Contents/MacOS/
 ```
 
-## 備註
-- 需先確認 T001-T005 全部完成
-- 若 fyne package 有問題，記錄錯誤並考慮替代打包方式（`go build` + macOS app bundle 結構）
+### 產出
+- `md-viewer.app/`（完整 macOS bundle）
+- 啟動方式：`./md-viewer.app` 或 `open md-viewer.app`
+
+### 驗收條件（達成）
+- [x] `./build.sh` 成功產生 md-viewer.app
+- [x] .app 雙擊可啟動，Window 正常顯示（900×800）
+- [x] ⌘O 開檔功能正常（osascript dialog）
+- [x] Markdown 預覽正常渲染（Swift-markdown + WebView）
+- [x] 6 主題可切換
+- [x] 設定面板可開啟（⌘,）
+- [x] 無 Crash 或 runtime panic
+
+### 編譯環境需求
+| 工具 | 版本 |
+|------|------|
+| Go | 1.26+ darwin/arm64 |
+| Swift | 5.7+（swift build） |
+| Xcode CmdLineTools | ✅ 需已安裝 |
+| macOS SDK | ✅ 內建 |
+
+### 已知限制
+- macOS 專屬（依賴 Cocoa/WebKit/CGO Objective-C）
+- libMarkdownEngine.dylib 路徑與 rpath 綁定，移動 app 位置後需重新 build
+
+---
+
+github_issue: https://github.com/openclawchen8-lgtm/openclaw-tasks/issues/96
+
+*任務完成：寶寶 | 2026-04-28（review 更新）*
