@@ -82,8 +82,8 @@
 | T021 | Mermaid 圖表 | ⚠️ skip |
 | T022 | 搜尋文件內容 | 📋 pending |
 | T023 | 滾動位置保持 | 📋 pending |
-| T024 | 視窗大小/位置記憶 | 📋 pending |
-| T025 | 最近開啟的檔案 | 📋 pending |
+| T024 | 視窗大小/位置記憶 | ✅ done |
+| T025 | 最近開啟的檔案 | ✅ done |
 | T026 | 專注模式 | 📋 pending |
 | T027 | 連結懸停預覽 | 📋 pending |
 

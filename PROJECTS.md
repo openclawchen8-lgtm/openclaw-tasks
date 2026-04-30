@@ -1,6 +1,6 @@
 # 📁 Projects Dashboard
 
-> 最後更新: 2026-05-01 03:39 · 自動生成
+> 最後更新: 2026-05-01 06:27 · 自動生成
 
 ---
 
@@ -10,18 +10,17 @@
 |------|------|
 | 專案數 | 43 |
 | 任務總數 | 273 |
-| ✅ 已完成 | 250 |
-| ⬜ 待處理 | 7 |
-| 🔄 進行中 | 5 |
+| ✅ 已完成 | 252 |
+| ⬜ 待處理 | 4 |
+| 🔄 進行中 | 6 |
 | ⏭️ 跳過 | 11 |
-| 總完成率 | 91% |
+| 總完成率 | 92% |
 
 ## 🔥 待處理高優先級任務
 
 | 專案 | 任務 | 標題 |
 |------|------|------|
 | md-viewer-app | [T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md) | [T023] 滾動位置保持 |
-| md-viewer-app | [T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md) | [T024] 視窗大小/位置記憶 |
 
 ---
 
@@ -54,9 +53,8 @@
 | ✅ | [kgi-monitor](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/kgi-monitor) | 6 | 6 | 0 | 0 | ████████████████████ 100% | — |
 | ✅ | [lifecycle-sync-fix](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/lifecycle-sync-fix) | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-21 |
 | ✅ | [llm-router](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/llm-router) | 2 | 2 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
-| 🔄 | [md-viewer-app](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/md-viewer-app) | 41 | 27 | 6 | 1 | █████████████░░░░░░░ 65% | 2026-04-28（review 更新） |
+| 🔄 | [md-viewer-app](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/md-viewer-app) | 41 | 29 | 3 | 2 | ██████████████░░░░░░ 70% | 2026-04-28（review 更新） |
   **[T023-滾動位置保持](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T023-滾動位置保持.md)**: [T023] 滾動位置保持
-  **[T024-視窗大小位置記憶](https://github.com/openclawchen8-lgtm/openclaw-tasks/blob/main/md-viewer-app/tasks/T024-視窗大小位置記憶.md)**: [T024] 視窗大小/位置記憶
 | ✅ | [member-backup](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-backup) | 1 | 1 | 0 | 0 | ████████████████████ 100% | 2026-04-16 |
 | ✅ | [member-config-review](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-config-review) | 7 | 7 | 0 | 0 | ████████████████████ 100% | — |
 | ✅ | [member-tasks](https://github.com/openclawchen8-lgtm/openclaw-tasks/tree/main/member-tasks) | 5 | 5 | 0 | 0 | ████████████████████ 100% | 2026-04-04 |
